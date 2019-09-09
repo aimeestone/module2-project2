@@ -1,26 +1,24 @@
-
 <h1>{{ plant.name }}</h1>
 
 <br>
 
-<div>
+<div class="onePlantimg">
   <img>{{ plant.image }}</img>
 </div>
 
 <div>
-  <ul>
-    <li>Name: {{ plant.name }}</li>
-    <li>How to take good care of it:</li>
-    <br>
-    <p>{{ plant.advice }}</p>
-    <li>Description: {{ plant.description }}</li>
-    <ul>Best environment to grow in:
-    {{#each plants}}
-    <li>{{ this.environment.light }}</li>
-    <li>{{ this.environment.humidity }}</li>
-     <li>{{ this.environment.pets }}</li>
-     <li>{{ this.environment.flowering }}</li>
-    {{/each }}
-    </ul>
+  <div>
+    <img src="{{plant.avatar}}" alt="{{plant.name}}">
+  </div>
+  <h2>{{ plant.name }}</h2>
+  <p>Description:<br>{{ plant.description }} </p>
+  <p>
+    How to take good care of it:<br> {{ plant.advice }}
+  </p>
+  <ul>Best environment to grow in:
+    <li>Lighting: {{ plant.environment.lighting }}</li>
+    <li>Humidity: {{ plant.environment.humidity }}</li>
+    <li>Pet friendly?{{ plant.environment.animals }}</li>
+    <li>Type of plant: {{ plant.environment.type_of_plant }}</li>
   </ul>
 </div>

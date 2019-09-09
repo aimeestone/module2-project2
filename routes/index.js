@@ -1,12 +1,12 @@
-const express = require('express');
-const router  = express.Router();
+const express = require("express");
+const router = express.Router();
 const user = require("../models/User");
 const plantModel = require("../models/Plant");
 
 
 /* GET home page */
-router.get('/', (req, res, next) => {
-  res.render('index');
+router.get("/", (req, res, next) => {
+  res.render("index");
 });
 
 // POSTING the survey responses
@@ -85,31 +85,29 @@ router.post('/survey', (req, res, next) => {
   // });
 });
 
-
 /* GET the user profile page */
-router.get('/profile', (req, res, next) => {
   user
   .findById(req.session.currentUser._id)
   .then(dbRes => {
     res.render('users/user_profile', {user: dbRes});
   })
-});
-
-/* GET the page showing all plants*/
-router.get('/plants', (req, res, next) => {
-  plantModel
-  .find()
   .then(dbRes => {
     res.render('plants/all_plants', {plants: dbRes});
   })
   .catch(error => {
     console.log(error);
-  });
-});
+  })
+    .find()
+    .then(dbRes => {
+      res.render("plants/all_plants", { plants: dbRes });
+    })
+    .catch(error => {
+      console.log(error);
+    });
+
 
 /* GET the page showing ONE plant */
-router.get('/plants/:id', (req, res, next) => {
-  
+router.get("/plants/:id", (req, res, next) => {
   plantModel
   .findById(req.params.id)
   .then(dbRes => {

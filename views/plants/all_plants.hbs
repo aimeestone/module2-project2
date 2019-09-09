@@ -1,23 +1,56 @@
-<h1 class="title">Have a look at all of our beautiful plants</h1>
-<aside>
-  <h3>Filter</h3>
-  <h4>Environment</h4>
-  <ul>
-    {{#each plants.outside}}
+<div id="plantsContainer">
+  <aside id="filter">
+    <h3>Filter</h3>
+    <h4>Environment</h4>
+    <ul>
+      <li>
+        <input id="filter_outdoor" type="checkbox" data-filter="outdoor" name="outdoor">
+        <label for="filter_outdoor">{{this}}</label>
+      </li>
+      <li>
+        <input id="filter_indoor" type="checkbox" data-filter="indoor" name="indoor">
+        <label for="filter_indoor">{{this}}</label>
+      </li>
+    </ul>
+    <h4>Lighting</h4>
+    <ul>
+      <li>
+        <input id="filter_direct" type="checkbox" data-filter="{{this}}" name="{{this}}">
+        <label for="filter_direct">{{this}}</label>
+      </li>
+    </ul>
+    <h4>Humidity</h4>
+    <ul>
+      <li>
+        <input id="filter_{{this}}" type="checkbox" data-filter="{{this}}" name="{{this}}">
+        <label for="filter_{{this}}">{{this}}</label>
+      </li>
+    </ul>
+    <h4>Type of plants</h4>
+    <ul>
+      <li>
+        <input id="filter_{{this}}" type="checkbox" data-filter="{{this}}" name="{{this}}">
+        <label for="filter_{{this}}">{{this}}</label>
+      </li>
+    </ul>
+    <h4>Animal lover</h4>
     <li>
-      <input id="filter_{{this}}" type="checkbox" data-filter="{{this}}" name="{{this}}">
-      <label for="filter_{{this}}">{{this}}</label>
+      <input id="filter_petfriendly" type="checkbox" data-filter="pet friendly" name="pet friendly">
+      <label for="filter_petfriendly">Pet Friendly</label>
     </li>
-    {{/each}}
-  </ul>
-</aside>
-<div>
-  {{#each plants}}
-  <img src="{{this.avatar}}" alt="plant-img" class="">
-  {{this.name}}
-  {{this.descriptif}}
-  {{this.advice}}
-  {{this.environment}}
-  {{/each}}
-</div>
+  </aside>
 
+  <div id="allPlants">
+    <h1 class="title">Have a look at all of our beautiful plants</h1>
+    {{#each plants}}
+    <div class="plant-mini">
+      <div class="plant-mini-img">
+        <a href="/plants/{{this._id}}"><img src="{{this.avatar}}" alt="plant-img"></a>
+      </div>
+      <a href="/plants/{{this._id}}">
+        <h4>{{this.name}}</h4>
+      </a>
+    </div>
+    {{/each}}
+  </div>
+</div>
