@@ -175,7 +175,7 @@ const plants = [
 			animals: [ 'pet friendly' ],
 			type_of_plant: [ 'green plant' ]
 		},
-		avatar: '../public/images/astilbe.jpg'
+		avatar: 'images/astilbe.jpg'
 	}
 ];
 
