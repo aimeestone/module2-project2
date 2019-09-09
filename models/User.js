@@ -17,12 +17,12 @@ const user = new Schema({
 		type_of_plant: { type: String, enum: [ 'green plant', 'plant with flowers' ] }
 	},
 	plant_test: {
-		name: Schema.Types.Name,
-		ref: 'Plants'
+		type: Schema.Types.ObjectId,
+		ref: 'Plant'
 	},
 	plant_owned: {
-		name: Schema.Types.Name,
-		ref: 'Plants'
+		type: Schema.Types.ObjectId,
+		ref: 'Plant'
 	}
 });
 
