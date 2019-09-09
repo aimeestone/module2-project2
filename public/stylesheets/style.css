@@ -1,8 +1,13 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+@import url("/stylesheets/partials.css");
 
-a {
-  color: #00B7FF; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+}
 
-/*# sourceMappingURL=style.css.map */
+/* HOME*/
+
+#home-container {
+  margin-top: 100px;
+}
