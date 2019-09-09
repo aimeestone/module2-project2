@@ -1,96 +1,93 @@
-{{!-- Getting the nav and the footer: --}}
-{{>footer_main}}
-{{>nav_main}}
-
-<h1>Welcome to [website name]!</h1>
+<h1>Welcome to BeLeaf!</h1>
 
 <h2>First things first, tell us a bit about your home...</h2>
-
-<form method="post" action="/survey/{{user._id}}" id="user_test">
+<br>
+<form method="post" action="/survey" id="user_test">
 <ol>
   <li>Which type of space are you looking for, to grow your plant?</li>
- <br> 
  <p>(Indoors, or outdoors like a balcony, terrace, garden...)</p>
 <br>
 
 <div>
-  <input type="radio" id="" name="habitation.outside" value="inside" checked>
+  <input type="radio" id="" name="outside" value="indoor" checked>
   <label for="inside">I only have a space indoors.</label>
 </div>
 
 <div>
-  <input type="radio" id="" name="habitation.outside" value="outside">
+  <input type="radio" id="" name="outside" value="outdoor">
   <label for="outside">I'd like to grow my plants only outside.</label>
 </div>
 
 <div>
-  <input type="radio" id="" name="habitation.outside" value="both">
+  <input type="radio" id="" name="outside" value="both">
   <label for="outside|inside">I have indoors and outdoors spaces, and would like to populate both spaces.</label>
 </div>
 
 <li>How would you describe the brightness level of your home?</li>
 <div>
-  <input type="radio" id="" name="habitation.lighting" value="direct" checked>
+  <input type="radio" id="" name="lighting" value="direct" checked>
   <label for="direct">Direct lighting</label>
 </div>
 
 <div>
-  <input type="radio" id="" name="habitation.lighting" value="softened" checked>
+  <input type="radio" id="" name="lighting" value="softened">
   <label for="softened">Softened lighting</label>
 </div>
 
 <div>
-  <input type="radio" id="" name="habitation.lighting" value="low to none" checked>
+  <input type="radio" id="" name="lighting" value="low to none">
   <label for="low to none">Low to no lighting</label>
 </div>
 
 <li>How humid would you evaluate your home?</li>
 <div>
-  <input type="radio" id="" name="habitation.humidity" value="dry" checked>
+  <input type="radio" id="" name="humidity" value="dry" checked>
   <label for="dry">Dry</label>
 </div>
 
 <div>
-  <input type="radio" id="" name="habitation.humidity" value="normal" checked>
+  <input type="radio" id="" name="humidity" value="normal">
   <label for="normal">Normal</label>
 </div>
 
 <div>
-  <input type="radio" id="" name="habitation.humidity" value="quite" checked>
+  <input type="radio" id="" name="humidity" value="quite">
   <label for="quite">Quite humid</label>
 </div>
 
 <li>Do you have a pet at home?</li>
-<br>
 <p>(Cat, dog, or any pet that loves eating plants!)</p>
 
 <div>
-  <input type="radio" id="" name="habitation.animals" value="pet friendly" checked>
+  <input type="radio" id="" name="animals" value="pet friendly" checked>
   <label for="pet friendly">Yep</label>
 </div>
 
 <div>
-  <input type="radio" id="" name="habitation.animals" value="both" checked>
+  <input type="radio" id="" name="animals" value="both">
   <label for="no pet">Nope</label>
 </div>
 
 <li>Do you have a preference in terms of plant types?</li>
 <div>
-  <input type="radio" id="" name="habitation.type_of_plant" value="plant with flowers" checked>
+  <input type="radio" id="" name="type_of_plant" value="plant with flowers" checked>
   <label for="plant with flowers">I prefer floral plants</label>
 </div>
 
 <div>
-  <input type="radio" id="" name="habitation.type_of_plant" value="green plant" checked>
+  <input type="radio" id="" name="type_of_plant" value="green plant">
   <label for="green plant">I prefer green plants</label>
 </div>
 
 <div>
-  <input type="radio" id="" name="both-types-plants" value="both" checked>
-  <label for="green plant|plant with flowers">I like both types!</label>
+  <input type="radio" id="" name="type_of_plant" value="both">
+  <label for="both">I like both types!</label>
 </div>
 
 </ol>
+
+<button>Show me my results!</button>
+
 </form>
 
 
