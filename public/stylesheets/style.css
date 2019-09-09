@@ -1,5 +1,6 @@
 @import url("/stylesheets/partials.css");
 @import url("/stylesheets/home.css");
+@import url("/stylesheets/plants.css");
 
 * {
   box-sizing: border-box;
