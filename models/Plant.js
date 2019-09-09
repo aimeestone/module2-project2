@@ -6,11 +6,11 @@ const plants = new Schema({
 	descriptif: String,
 	advice: String,
 	environment: {
-		outside: { type: String, enum: [ 'outside', 'inside' ] },
-		lighting: { type: String, enum: [ 'low to none', 'softened', 'direct' ] },
-		humidity: { type: String, enum: [ 'dry', 'normal', 'dry' ] },
-		animals: { type: String, enum: [ 'pet friendly', 'no pet' ] },
-		type_of_plant: { type: String, enum: [ 'green plant', 'plant with flowers' ] }
+		outside: { type: [ String ], enum: [ 'outdoor', 'indoor' ] },
+		lighting: { type: [ String ], enum: [ 'low to none', 'softened', 'direct' ] },
+		humidity: { type: [ String ], enum: [ 'dry', 'normal', 'quite' ] },
+		animals: { type: [ String ], enum: [ 'pet friendly', 'not pet friendly' ] },
+		type_of_plant: { type: [ String ], enum: [ 'green plant', 'plant with flowers' ] }
 	},
 	avatar: String
 });
