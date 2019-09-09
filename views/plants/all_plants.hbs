@@ -1,0 +1,22 @@
+<h1 class="title">Have a look at all of our beautiful plants</h1>
+<aside>
+  <h3>Filter</h3>
+  <h4>Environment</h4>
+  <ul>
+    {{#each plants.outside}}
+    <li>
+      <input id="filter_{{this}}" type="checkbox" data-filter="{{this}}" name="{{this}}">
+      <label for="filter_{{this}}">{{this}}</label>
+    </li>
+    {{/each}}
+  </ul>
+</aside>
+<div>
+  {{#each plants}}
+  <img src="{{this.avatar}}" alt="plant-img" class="">
+  {{this.name}}
+  {{this.descriptif}}
+  {{this.advice}}
+  {{this.environment}}
+  {{/each}}
+</div>

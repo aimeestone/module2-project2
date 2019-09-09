@@ -27,10 +27,12 @@ router.post("/signup", cloudinary.single("avatar"), (req, res) => {
         const hashed = bcrypt.hashSync(newUser.password, salt);
         newUser.password = hashed;
 
-        newUser.avatar = req.file.secure_url;
+        if (req.fil) {
+          newUser.avatar = req.file.secure_url;
+        }
 
         UserModel.create(newUser)
-          .then(response => res.redirect("/survey"))
+          .then(response => res.redirect(`/survey/${response._id}`))
           .catch(error => console.log(error));
       }
     })
@@ -51,7 +53,7 @@ router.post("/login", (req, res) => {
       } else {
         if (bcrypt.compareSync(user.password, dbRes.password)) {
           req.session.currentUser = user;
-          res.redirect(`/profil/${dbRes._id}`);
+          res.redirect(`/`);
         } else {
           res.render("users/login", { msg: "Incorrect email or password" });
           return;
