@@ -13,7 +13,7 @@ router.get('/survey/:id', (req, res, next) => {
   user
     .getOne(req.params.id)
     .then(dbRes => {
-      res.render('/views/users/survey', { user: dbRes });
+      res.render('/users/survey', { user: dbRes });
     })
     .catch(error => {
       console.log(error);
@@ -23,7 +23,7 @@ router.get('/survey/:id', (req, res, next) => {
 
 router.post('/survey/:id', (req, res, next) => {
 
-  const{outside,lighting, humidity, animals, type_of_plants} = req.body
+  const {outside,lighting, humidity, animals, type_of_plants} = req.body
 
   const newUserTest = {
     outside,
@@ -56,22 +56,44 @@ router.post('/survey/:id', (req, res, next) => {
     req.body = {};
     res.redirect("/profile/:id");
   })
+  .catch(error => {
+    console.log(error);
+  });
 });
 
 
 /* GET the user profile page */
 router.get('/profile/:id', (req, res, next) => {
-  res.render('/views/users/user_profile');
+  user
+  .findById(req.params.id)
+  .then(dbRes => {
+    res.render('/users/user_profile', {user: dbRes});
+  })
 });
 
 /* GET the page showing all plants*/
 router.get('/plants', (req, res, next) => {
-  res.render('/views/plants/all_plants');
+  plantModel
+  .find()
+  .then(dbRes => {
+    res.render('/plants/all_plants', {plants: dbRes});
+  })
+  .catch(error => {
+    console.log(error);
+  });
 });
 
-/* GET the page showing ONE plant*/
+/* GET the page showing ONE plant */
 router.get('/plants/:id', (req, res, next) => {
-  res.render('/views/plants/');
+  
+  plantModel
+  .findById(req.params.id)
+  .then(dbRes => {
+    res.render('/plants/one_plant', {plant: dbRes});
+  })
+  .catch(error => {
+    console.log(error);
+  });
 });
 
 module.exports = router;
