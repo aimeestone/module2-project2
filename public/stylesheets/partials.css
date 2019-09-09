@@ -1,0 +1,41 @@
+/* NAV*/
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  background-color: grey;
+  padding: 20px;
+  position: static;
+  top: 0:
+
+}
+
+#main-nav {
+  justify-self: flex-start;
+  width: 60%;
+}
+
+nav ul {
+  display: inline;
+  list-style-type: none;
+}
+
+nav li{
+  display: inline;
+  padding: 0 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#user-nav {
+  justify-self: flex-end;
+  width: 40%;
+  text-align: right;
+}
+
+

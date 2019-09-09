@@ -1,0 +1,26 @@
+
+<h1>{{ plant.name }}</h1>
+
+<br>
+
+<div>
+  <img>{{ plant.image }}</img>
+</div>
+
+<div>
+  <ul>
+    <li>Name: {{ plant.name }}</li>
+    <li>How to take good care of it:</li>
+    <br>
+    <p>{{ plant.advice }}</p>
+    <li>Description: {{ plant.description }}</li>
+    <ul>Best environment to grow in:
+    {{#each plants}}
+    <li>{{ this.environment.light }}</li>
+    <li>{{ this.environment.humidity }}</li>
+     <li>{{ this.environment.pets }}</li>
+     <li>{{ this.environment.flowering }}</li>
+    {{/each }}
+    </ul>
+  </ul>
+</div>

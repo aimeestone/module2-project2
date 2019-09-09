@@ -1,0 +1,19 @@
+<nav>
+  <a href="/">Logo</a>
+  <ul id="main-nav">
+    <li><a href="/plants">Plants repertory</a></li>
+    {{#if isLoggedIn }}
+    <li><a href="/map">Garden Centers Map</a></li>
+    {{/if}}
+  </ul>
+
+  <ul id="user-nav">
+    {{#if isLoggedIn }}
+    <li><a href="/profil">Profil</a></li>
+    <li><a href="/logout">Logout</a></li>
+    {{/if}}
+    {{#unless isLoggedIn}}
+    <li><a href="/login">Login</a></li>
+    {{/unless}}
+  </ul>
+</nav>
