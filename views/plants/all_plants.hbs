@@ -10,14 +10,47 @@
     </li>
     {{/each}}
   </ul>
+  <h4>Lighting</h4>
+  <ul>
+    {{#each plants.lighting}}
+    <li>
+      <input id="filter_{{this}}" type="checkbox" data-filter="{{this}}" name="{{this}}">
+      <label for="filter_{{this}}">{{this}}</label>
+    </li>
+    {{/each}}
+  </ul>
+  <h4>Humidity</h4>
+  <ul>
+    {{#each plants.humidity}}
+    <li>
+      <input id="filter_{{this}}" type="checkbox" data-filter="{{this}}" name="{{this}}">
+      <label for="filter_{{this}}">{{this}}</label>
+    </li>
+    {{/each}}
+  </ul>
+  <h4>Type of plants</h4>
+  <ul>
+    {{#each plants.type}}
+    <li>
+      <input id="filter_{{this}}" type="checkbox" data-filter="{{this}}" name="{{this}}">
+      <label for="filter_{{this}}">{{this}}</label>
+    </li>
+    {{/each}}
+  </ul>
+  <h4>Animal lover</h4>
+  <li>
+    <input id="filter_petfriendly" type="checkbox" data-filter="pet friendly" name="pet friendly">
+    <label for="filter_petfriendly">Pet Friendly</label>
+  </li>
 </aside>
+
 <div>
   {{#each plants}}
-  <img src="{{this.avatar}}" alt="plant-img" class="">
-  {{this.name}}
-  {{this.descriptif}}
-  {{this.advice}}
-  {{this.environment}}
+  <div>
+    <a href="/plants/{{this._id}}"><img src="{{this.avatar}}" alt="plant-img"></a>
+    <a href="/plants/{{this._id}}">
+      <h4>{{this.name}}</h4>
+    </a>
+  </div>
   {{/each}}
 </div>
-

@@ -1,4 +1,5 @@
 @import url("/stylesheets/partials.css");
+@import url("/stylesheets/home.css");
 
 * {
   box-sizing: border-box;
@@ -7,7 +8,3 @@
 }
 
 /* HOME*/
-
-#home-container {
-  margin-top: 100px;
-}
