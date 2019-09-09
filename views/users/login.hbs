@@ -1,0 +1,15 @@
+<h1>Login</h1>
+
+{{#if msg}}
+<span>msg</span>
+{{/if}}
+
+<form action="/login" method="post">
+  <label for="email">Email</label>
+  <input id="email" type="email" name="email" required placeholder="email" value="lola@foo.com">
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" required placeholder="password" value="1234">
+  <button>Login</button>
+</form>
+
+<p>Don't have an account yet ? <a href="/signup">Sign Up</a></p>
