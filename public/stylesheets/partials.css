@@ -8,8 +8,8 @@ nav {
   background-color: grey;
   padding: 20px;
   position: static;
-  top: 0:
-
+  top: 0;
+  height: 50px;
 }
 
 #main-nav {
@@ -22,7 +22,7 @@ nav ul {
   list-style-type: none;
 }
 
-nav li{
+nav li {
   display: inline;
   padding: 0 20px;
 }
@@ -37,5 +37,3 @@ nav a {
   width: 40%;
   text-align: right;
 }
-
-

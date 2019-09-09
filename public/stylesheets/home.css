@@ -1,0 +1,71 @@
+header {
+  background-image: url("/images/chris-lee-70l1tDAI6rM-unsplash.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+
+header a {
+  background-color: white;
+  text-decoration: none;
+  color: green;
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+header * {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#firstScreen {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  text-align: center;
+}
+
+h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+}
+
+section {
+  margin: 20px 0;
+}
+
+#advantages,
+#testimonials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+  flex-wrap: wrap;
+}
+
+.advantage,
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  text-align: center;
+}
+
+.advantageImg,
+.testimonialsImg {
+  width: 80%;
+}
+
+.advantageImg img,
+.testimonials img {
+  width: 50%;
+}

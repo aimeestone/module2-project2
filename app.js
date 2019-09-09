@@ -87,7 +87,6 @@ app.use(express.static(path.join(__dirname, "public")));
 hbs.registerPartials(path.join(__dirname, "/views/partials"));
 
 // default value for title local
-app.locals.title = "Express - Generated with IronGenerator";
 
 const index = require("./routes/index");
 const authRouter = require("./routes/authentification");
