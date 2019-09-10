@@ -1,3 +1,27 @@
-<h1>This is your profile</h1>
+<h1>My profile</h1>
 
-<a href="/survey">Survey</a>
+<p>{{ user.name }}</p>
+<div class="">
+  <img src="{{ user.avatar }}" alt="{{ user.name }}"></img>
+</div>
+
+<h2>My favorite plants</h2>
+
+<h3>Flowering plants</h3>
+
+<h3>Green plants</h3>
+
+<div>
+  <h2>{{ plant.name }}</h2>
+  <p>Description:<br>{{ plant.description }}</p>
+  <p>
+    How to take good care of it:<br> {{ plant.advice }}
+  </p>
+  <ul>Best environment to grow in:
+    <li>Lighting: {{ plant.environment.lighting }}</li>
+    <li>Humidity: {{ plant.environment.humidity }}</li>
+    <li>Pet friendliness: {{ plant.environment.animals }}</li>
+    <li>Type of plant: {{ plant.environment.type_of_plant }}</li>
+  </ul>
+</div>
+

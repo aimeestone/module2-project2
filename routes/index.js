@@ -103,8 +103,6 @@ router.post("/survey", (req, res, next) => {
 // });
 
 /* GET the user profile page */
-router.get("/profile", (req, res) => {
-  console.log("current user", req.session.currentUser);
   user
     .findOne({ email: req.session.currentUser.email })
     .then(dbRes => {
