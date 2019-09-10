@@ -86,6 +86,7 @@ router.post('/survey', (req, res, next) => {
 });
 
 /* GET the user profile page */
+const currentUser = req.session.currentUser
   user
   .findById(req.session.currentUser._id)
   .then(dbRes => {
