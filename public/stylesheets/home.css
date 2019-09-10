@@ -1,7 +1,7 @@
 header {
   background-image: url("/images/chris-lee-70l1tDAI6rM-unsplash.jpg");
   background-size: cover;
-  height: 100vh;
+  height: 50vh;
 }
 
 header a {
@@ -19,6 +19,7 @@ header * {
 
 h1 {
   text-align: center;
+  font-size: 150px;
 }
 
 #firstScreen {
@@ -68,4 +69,33 @@ section {
 .advantageImg img,
 .testimonials img {
   width: 50%;
+}
+
+#callToAction {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  text-align: center;
+}
+
+section a {
+    background-color: green ;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+h4 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+#advantages {
+  font-size: 20px;
 }
