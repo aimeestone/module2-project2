@@ -11,15 +11,8 @@ router.get('/', (req, res, next) => {
 
 // POSTING the survey responses
 router.get('/survey', (req, res, next) => {
-	user
-		.findById(req.params.id)
-		.then((dbRes) => {
-			res.render('users/survey', { user: dbRes });
-		})
-		.catch((error) => {
-			console.log(error);
-			return next(dbErr);
-		});
+	console.log('current user survey', req.session.currentUser);
+	res.render('users/survey');
 });
 
 router.post('/survey', (req, res, next) => {
@@ -36,80 +29,46 @@ router.post('/survey', (req, res, next) => {
 		}
 	};
 
-	// if (!outside || !lighting || !humidity || !animals || !type_of_plants) {
-	//   res.render("users/survey", {
-	//     errorMessage: "Please fill all fields, otherwise we can't give you advice!"
-	//   });
-	//   return;
-	// }
+	if (dbRes.habitation.outisde === 'both') {
+		dbRes.habitation.outisde === [ 'indoor', 'outside' ];
+	}
 
-	user
-		.findOneAndUpdate({ email: currentUser.email }, newUserTest)
-		.then((dbRes) => {
-			console.log(dbRes);
-			if (dbRes.habitation === 'both') {
-				dbRes.habitation === {};
-			}
-			plantModel
-				.find({
-					environment: {
-						outside: { $in: [ dbRes.habitation.outside ] },
-						lighting: { $in: [ dbRes.habitation.lighting ] },
-						humidity: { $in: [ dbRes.habitation.humidity ] },
-						animals: { $in: [ dbRes.habitation.animals ] },
-						type_of_plant: { $in: [ dbRes.habitation.type_of_plant ] }
-					}
-				})
-				.then((response) => {
-					console.log(response);
-					user
-						.findOneAndUpdate({ email: currentUser.email }, { plant_test: response })
-						.then((answer) => res.redirect('/profile'))
-						.catch((dbErr) => console.log(dbErr));
-				})
-				.catch((error) => {
-					console.log(error);
-				});
+	plantModel
+		.find({
+			$and: [
+				{ 'environment.outside': req.body.habitation.outside },
+				{ 'environment.lighting': req.body.habitation.lighting },
+				{ 'environment.humidity': req.body.habitation.humidity },
+				{ 'environment.animals': req.body.habitation.animals },
+				{ 'environment.type_of_plant': req.body.habitation.type_of_plant }
+			]
 		})
-		.catch((err) => console(err));
-
-	// plantModel
-	// .find({
-	//   outside: newUserTest.outside,
-	//   lighting: newUserTest.lighting,
-	//   humidity: newUserTest.humidity,
-	//   animals: newUserTest.animals,
-	//   type_of_plants: newUserTest.type_of_plants
-	// })
-	// .then(dbRes => {
-	//   req.body = {};
-	//   res.redirect("/profile");
-	// })
-	// .catch(error => {
-	//   console.log(error);
-	// });
+		.then((response) => {
+			console.log('response', response);
+			user
+				.findOneAndUpdate({ email: req.session.currentUser.email }, { plant_test: response })
+				.then((answer) => res.redirect('/profile'))
+				.catch((dbErr) => console.log('err', dbErr));
+		})
+		.catch((error) => {
+			console.log(error);
+		})
+		.catch((err) => console.log(err));
 });
 
 /* GET the user profile page */
-// router.get('');
-// user
-// 	.findById({ email: req.session.currentUser.email })
-// 	.then((dbRes) => {
-// 		res.render('users/user_profile', { user: dbRes });
-// 	})
-// 	.then((dbRes) => {
-// 		res.render('plants/all_plants', { plants: dbRes });
-// 	})
-// 	.catch((error) => {
-// 		console.log(error);
-// 	})
-// 	.find()
-// 	.then((dbRes) => {
-// 		res.render('plants/all_plants', { plants: dbRes });
-// 	})
-// 	.catch((error) => {
-// 		console.log(error);
-// 	});
+user
+	.findOne({ email: req.session.currentUser.email })
+	.then((dbRes) => {
+		console.log('ici', dbRes);
+		res.render('users/user_profile', { user: dbRes });
+	})
+	// .then(dbRes => {
+	//   res.render("plants/all_plants", { plants: dbRes });
+	// })
+	.catch((error) => {
+		console.log(error);
+	});
 
 /* GET the page showing ONE plant */
 router.get('/plants/:id', (req, res, next) => {
