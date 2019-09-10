@@ -2,42 +2,64 @@
   <aside id="filter">
     <h3>Filter</h3>
     <h4>Environment</h4>
-    <ul>
-      <li>
-        <input id="filter_outdoor" type="checkbox" data-filter="outdoor" name="outdoor">
-        <label for="filter_outdoor">{{this}}</label>
+    <ul class="filterCategory">
+      <li class="filterLabel">
+        <input id="filter_outdoor" type="checkbox" name="outside" value="outdoor">
+        <label for="filter_outdoor">outdoor</label>
       </li>
-      <li>
-        <input id="filter_indoor" type="checkbox" data-filter="indoor" name="indoor">
-        <label for="filter_indoor">{{this}}</label>
+      <li class="filterLabel">
+        <input id="filter_indoor" type="checkbox" name="outside" value="indoor">
+        <label for="filter_indoor">indoor</label>
       </li>
     </ul>
     <h4>Lighting</h4>
-    <ul>
-      <li>
-        <input id="filter_direct" type="checkbox" data-filter="{{this}}" name="{{this}}">
-        <label for="filter_direct">{{this}}</label>
+    <ul class="filterCategory">
+      <li class="filterLabel">
+        <input id="filter_direct" type="checkbox" name="lighting" value="direct">
+        <label for="filter_direct">direct</label>
+      </li>
+      <li class="filterLabel">
+        <input id="filter_softened" type="checkbox" name="lighting" value="softened">
+        <label for="filter_softened">softened</label>
+      </li>
+      <li class="filterLabel">
+        <input id="filter_low to none" type="checkbox" name="lighting" value="low to none">
+        <label for="filter_low to none">low to none</label>
       </li>
     </ul>
     <h4>Humidity</h4>
-    <ul>
-      <li>
-        <input id="filter_{{this}}" type="checkbox" data-filter="{{this}}" name="{{this}}">
-        <label for="filter_{{this}}">{{this}}</label>
+    <ul class="filterCategory">
+      <li class="filterLabel">
+        <input id="filter_quite" type="checkbox" name="humidity" value="quite">
+        <label for="filter_quite">quite</label>
+      </li>
+      <li class="filterLabel">
+        <input id="filter_normal" type="checkbox" name="humidity" value="normal">
+        <label for="filter_normal">normal</label>
+      </li>
+      <li class="filterLabel">
+        <input id="filter_dry" type="checkbox" name="humidity" value="dry">
+        <label for="filter_dry">quite</label>
       </li>
     </ul>
     <h4>Type of plants</h4>
-    <ul>
-      <li>
-        <input id="filter_{{this}}" type="checkbox" data-filter="{{this}}" name="{{this}}">
-        <label for="filter_{{this}}">{{this}}</label>
+    <ul class="filterCategory">
+      <li class="filterLabel">
+        <input id="filter_green plant" type="checkbox" name="type_of_plant" value="green plant">
+        <label for="filter_green plant">green plant</label>
+      </li>
+      <li class="filterLabel">
+        <input id="filter_plant with flowers" type="checkbox" name="type_of_plant" value="plant with flowers">
+        <label for="filter_plant with flowers">plant with flowers</label>
       </li>
     </ul>
     <h4>Animal lover</h4>
-    <li>
-      <input id="filter_petfriendly" type="checkbox" data-filter="pet friendly" name="pet friendly">
-      <label for="filter_petfriendly">Pet Friendly</label>
-    </li>
+    <ul class="filterCategory">
+      <li class="filterLabel">
+        <input id="filter_petfriendly" type="checkbox" name="animals" value="pet friendly">
+        <label for="filter_petfriendly">Pet Friendly</label>
+      </li>
+    </ul>
   </aside>
 
   <div id="allPlants">
@@ -45,6 +67,7 @@
     {{#each plants}}
     <div class="plant-mini">
       <div class="plant-mini-img">
+        <span class="fav" data-id="{{this._id}}">Heart</span>
         <a href="/plants/{{this._id}}"><img src="{{this.avatar}}" alt="plant-img"></a>
       </div>
       <a href="/plants/{{this._id}}">
