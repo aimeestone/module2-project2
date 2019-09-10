@@ -37,9 +37,6 @@ router.post("/survey", (req, res, next) => {
     }
   };
 
-  
-  
-
   // user
   //   .findOneAndUpdate({ email: req.session.currentUser.email }, newUserTest)
   //   .then(dbRes => {
@@ -83,8 +80,7 @@ router.post("/survey", (req, res, next) => {
           console.log(error);
         })
         .catch(err => console.log(err));
-    });
-});
+  });
 
 // plantModel
 // .find({
@@ -103,6 +99,7 @@ router.post("/survey", (req, res, next) => {
 // });
 
 /* GET the user profile page */
+router.get("/profile",(req,res)=>{
   user
     .findOne({ email: req.session.currentUser.email })
     .then(dbRes => {
@@ -114,8 +111,20 @@ router.post("/survey", (req, res, next) => {
     // })
     .catch(error => {
       console.log(error);
-    });
+})
 });
+//   user
+//     .findOne({ email: req.session.currentUser.email })
+//     .then(dbRes => {
+//       console.log("ici", dbRes);
+//       res.render("users/user_profile", { user: dbRes });
+//     })
+//     // .then(dbRes => {
+//     //   res.render("plants/all_plants", { plants: dbRes });
+//     // })
+//     .catch(error => {
+//       console.log(error);
+// });
 
 // .find()
 //     .then(dbRes => {
