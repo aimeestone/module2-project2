@@ -1,0 +1,17 @@
+.title_map {
+  margin: 100px 0 70px 0;
+  text-align: center;
+  font-size: 80px;
+  color: #1b423a;
+  text-shadow: 3px 5px 2px grey;
+}
+
+.title_marker {
+  font-size: 25px;
+  margin: 0
+}
+
+.gm-style-iw-d{
+  width: auto;
+  height: auto;
+}
