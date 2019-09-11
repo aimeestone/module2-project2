@@ -3,8 +3,8 @@ var map;
 function startMap() {
 	console.log('ici');
 	const plant = {
-		lat: 48.852633,
-		lng: 2.388308
+		lat: 48.862058,
+		lng: 2.347173
 	};
 	map = new google.maps.Map(document.getElementById('map'), {
 		zoom: 15,
@@ -42,14 +42,6 @@ function getGardenCenter() {
 		});
 }
 
-var markers = [];
-// markers.forEach((marker) => {
-// 	marker.onclick = () => {
-// 		console.log('clicked');
-// 		infowindow.open(map, pin);
-// 	};
-// });
-
 function placeGardenCenter(gardenCenter) {
 	gardenCenter.forEach(function(center) {
 		const centerMap = {
@@ -57,9 +49,10 @@ function placeGardenCenter(gardenCenter) {
 			lng: center.long
 		};
 		var content = `<div id="content">
-    <h4 id="firstHeading" class="firstHeading">${center.name}</h4><br>+
-    <p><b>Adresse: </b>${center.adresse}</p>+
-    </div>`;
+    <h3 class="title_marker">${center.name}</h3><br>
+    <p><b>Adresse: </b>${center.adresse}</p>
+		</div>`;
+
 		var infowindow = new google.maps.InfoWindow({
 			content: content
 		});
@@ -68,17 +61,18 @@ function placeGardenCenter(gardenCenter) {
 			map: map,
 			title: center.name
 		});
-		markers.push(pin);
-		markers.forEach((marker) => {
-			marker.onclick = function() {
-				console.log('clicked');
-				infowindow.open(map, markers);
-			};
+
+		console.log('---------------------- oi');
+
+		pin.addListener('click', function handleClick() {
+			console.log('clicked');
+			infowindow.open(map, pin);
 		});
+
+		console.log(pin, infowindow);
 	});
 }
 
 document.addEventListener('DOMContentLoaded', () => {
 	startMap();
-	// getGardenCenter();
 });

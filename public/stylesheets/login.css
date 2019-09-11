@@ -1,0 +1,86 @@
+#content_login {
+  background-image: url("../images/ren-ran-bBiuSdck8tU-unsplash.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#login {
+  margin-top : 150px;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 8px rgb(58, 58, 58);
+  height: 700px;
+}
+
+.login {
+  text-align: center;
+  font-size: 80px;
+  color: #B4C027;
+  text-shadow: 3px 5px 2px #1b423a;
+  margin: 0 0 0 0;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.button {
+  background-color: #67aa1a;
+  text-decoration: none;
+  color: #F1F0eb;
+  font-size: 30px;
+  padding: 7px 80px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+.email, .password {
+  margin: 20px 0;
+}
+
+#form p {
+  margin-top: 25px;
+}
+
+.input {
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #1b423a;
+  color: white;
+  text-align: center;
+}
+
+.fas, .fa-heart{
+  color: red;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 40px;
+  color: #1b423a;
+  margin: 0 0 0 0;
+  text-shadow: none;
+}
