@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {});
+document.addEventListener('DOMContentLoaded', () => {});
 
 // const allPlants = document.getElementById("allPlants");
 var grid = document.getElementById("grid");
@@ -111,20 +111,20 @@ searchBtn.onclick = () => {
 
 const heart = document.querySelectorAll(".fav");
 
-heart.forEach(fav => {
-  fav.onclick = function({ target }) {
-    target.classList.toggle("is-active");
-    let favarr = [];
-    document.querySelectorAll(".fav").forEach(heart => {
-      if (heart.classList.contains("is-active")) {
-        favarr.push(heart.dataset.id);
-      }
-    });
-    axios
-      .post("http://localhost:3000/plants/fav", { hearts: favarr })
-      .then(dbRes => console.log(dbRes))
-      .catch(err => console.log(err));
-  };
+heart.forEach((fav) => {
+	fav.onclick = function({ target }) {
+		target.classList.toggle('is-active');
+		let favarr = [];
+		document.querySelectorAll('.fav').forEach((heart) => {
+			if (heart.classList.contains('is-active')) {
+				favarr.push(heart.dataset.id);
+			}
+		});
+		axios
+			.post('http://localhost:3000/plants/fav', { hearts: favarr })
+			.then((dbRes) => console.log(dbRes))
+			.catch((err) => console.log(err));
+	};
 });
 
 /* Masonery Grid*/

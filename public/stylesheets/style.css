@@ -1,11 +1,15 @@
 @import url("/stylesheets/partials.css");
 @import url("/stylesheets/home.css");
 @import url("/stylesheets/plants.css");
+@import url("/stylesheets/signup.css");
+@import url("/stylesheets/login.css");
+@import url("/stylesheets/map.css");
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 /* HOME*/
