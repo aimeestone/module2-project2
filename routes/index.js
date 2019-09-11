@@ -56,7 +56,9 @@ router.post('/survey', (req, res, next) => {
 		.catch((err) => console.log(err));
 });
 
+
 /* GET the user profile page */
+
 router.get('/profile', (req, res) => {
 	user
 		.findOne({ email: req.session.currentUser.email })
@@ -82,6 +84,7 @@ router.get('/plants/:id', (req, res, next) => {
 		.catch((error) => {
 			console.log(error);
 		});
+
 });
 
 router.get('/map', (req, res) => {
