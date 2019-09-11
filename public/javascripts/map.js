@@ -49,7 +49,7 @@ function placeGardenCenter(gardenCenter) {
 			lng: center.long
 		};
 		var content = `<div id="content">
-    <h4>${center.name}</h4><br>
+    <h3 class="title_marker">${center.name}</h3><br>
     <p><b>Adresse: </b>${center.adresse}</p>
 		</div>`;
 
