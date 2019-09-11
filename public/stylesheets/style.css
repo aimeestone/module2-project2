@@ -4,12 +4,13 @@
 @import url("/stylesheets/signup.css");
 @import url("/stylesheets/login.css");
 @import url("/stylesheets/map.css");
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+@import url("/stylesheets/user_profile.css");
 
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 /* HOME*/
