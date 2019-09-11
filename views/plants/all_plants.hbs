@@ -74,9 +74,9 @@
       <div class="gutter-sizer"></div>
       {{#each plants}}
       <div class="plant-mini grid-item grid-item--height2">
+        <i class="fav fas fa-heart white" data-id="{{this._id}}"></i>
         <a class="plantsInfo" href="/plants/{{this._id}}">
           <div>
-            <span class="fav" data-id="{{this._id}}">Heart</span>
             <h4>{{this.name}}</h4>
           </div>
         </a>

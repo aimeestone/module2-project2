@@ -5,7 +5,7 @@ nav {
   flex-direction: row;
   align-items: center;
   width: 100vw;
-  background-color: #3d7012;
+  background-color: #1b423a;
   padding: 20px;
   position: static;
   top: 0;
@@ -42,7 +42,7 @@ nav a {
 
 nav a:hover {
   text-decoration: none;
-  color: #6daf21;
+  color: #cdd9d7;
 }
 
 #user-nav {

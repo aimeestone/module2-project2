@@ -4,12 +4,21 @@
 @import url("/stylesheets/signup.css");
 @import url("/stylesheets/login.css");
 @import url("/stylesheets/map.css");
-@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
 }
+
+/*color palette
+grey : #6b6c6b
+dark green: #1b423a
+blue green: #7db094
+light green: #7db0a4
+extra light green: #cdd9d7
+
+*/
 
 /* HOME*/
