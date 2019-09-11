@@ -1,17 +1,23 @@
-<h1>Sign up</h1>
+<div id="content_signup">
+  <div id="signup">
+<h1 class="title_signup">Sign up</h1>
 
 {{#if msg}}
 <span>{{msg}}</span>
 {{/if}}
 
-<form action="/signup" method="post" enctype="multipart/form-data">
-  <label for="name">Name</label>
-  <input id="name" type="text" name="name" required placeholder="name" value="lola">
-  <label for="email">Email</label>
-  <input id="email" type="email" name="email" required placeholder="email" value="lola@foo.com">
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" required placeholder="password" value="1234">
-  <label for="avatar">Avatar</label>
-  <input id="avatar" type="file" name="avatar">
-  <button>Create an account</button>
+ <div id="form">
+<form class="form" action="/signup" method="post" enctype="multipart/form-data">
+  <label class="label" for="name">Name</label>
+  <input class="input_signup" id="name" type="text" name="name" required placeholder="name" value="lola">
+  <label class="label" for="email">Email</label>
+  <input class="input_signup" id="email" type="email" name="email" required placeholder="email" value="lola@foo.com">
+  <label class="label" for="password">Password</label>
+  <input class="input_signup" id="password" type="password" name="password" required placeholder="password" value="1234">
+  <label class="label" for="avatar">Avatar</label>
+  <input  class="input_signup"id="avatar" type="file" name="avatar">
+  <button class="button_signup">Create an account</button>
 </form>
+</div>
+</div>
+</div>

@@ -51,7 +51,8 @@ function placeGardenCenter(gardenCenter) {
 		var content = `<div id="content">
     <h4>${center.name}</h4><br>
     <p><b>Adresse: </b>${center.adresse}</p>
-    </div>`;
+		</div>`;
+
 		var infowindow = new google.maps.InfoWindow({
 			content: content
 		});
@@ -74,5 +75,4 @@ function placeGardenCenter(gardenCenter) {
 
 document.addEventListener('DOMContentLoaded', () => {
 	startMap();
-	// getGardenCenter();
 });
