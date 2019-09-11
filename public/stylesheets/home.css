@@ -3,14 +3,18 @@
   padding: 0;
 }
 
+#home-container {
+  padding: 0;
+}
+
 header {
-  background-image: url("/images/chris-lee-70l1tDAI6rM-unsplash.jpg");
+  background-image: url("/images/scott-webb-oRWRlTgBrPo-unsplash.jpg");
   background-size: cover;
-  height: 50vh;
+  height: 90vh;
 }
 
 header a {
-  background-color: #67aa1a;
+  background-color: #7db094;
   text-decoration: none;
   color: #f1f0eb;
   font-size: 30px;
@@ -18,27 +22,28 @@ header a {
   border-radius: 30px;
 }
 
-header * {
-  padding: 20px;
-}
-
-.home-title {
-  text-align: center;
+h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: right;
   font-size: 100px;
-  color: #f1f0eb;
-  text-shadow: 3px 5px 2px #1b423a;
+  color: #1b423a;
+  margin: 0;
+  width: 50vw;
 }
 
 h2 {
   font-size: 30px;
-  color: #f1f0eb;
-  text-shadow: 2px 3px 1px #1b423a;
-  margin: 0 0 30px 0;
+  color: #6b6c6b;
+  /* margin: 0 0 30px 0; */
+  width: 50vw;
+  font-weight: lighter;
+  text-align: right;
+  margin-bottom: 20px;
 }
 
 h3 {
   text-align: center;
-  color: #549714;
+  color: #1b423a;
   width: 100%;
   font-size: 50px;
   margin: 70px 0 0 0;
@@ -50,40 +55,37 @@ h3 {
 }
 
 p {
-  font-size: 20px;
-  color: #1b423a;
+  font-size: 18px;
+  color: #6b6c6b;
   margin-bottom: 20px;
+  padding: 5px;
 }
 
 #firstScreen {
-  margin-top: 50px;
+  margin-top: 70px;
   position: static;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  left: 0;
-  text-align: center;
-  height: 500px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding-right: 20px;
 }
 
-section {
+/* section {
   margin: 20px 0;
+} */
+
+#advantages {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  grid-column-gap: 10%;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
 }
 
-#advantages,
-#testimonials {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-column-gap: 20px;
-  /* width: 100%; */
-  height: 300px;
-  margin: 40px 30px 100px 30px;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-self: center;
-  flex-wrap: wrap; */
+.titleadvantage {
+  margin: 20px 0;
 }
 
 .advantage,
@@ -92,29 +94,54 @@ section {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  /* height: 300px; */
   text-align: center;
-  height: 100%;
 }
 
 .advantage {
-  border-radius: 20px;
-  border: solid 2px #ede9e6;
+  height: 400px;
+  border: none;
+  box-shadow: 0px 0px 10px 2px rgba(58, 58, 58, 0.4);
 }
 
-.advantageImg,
+.advantage p {
+  height: 100px;
+}
+
+.advantageImg {
+  max-width: 100%;
+  height: 300px;
+}
+
+.advantageImg img {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 30px; */
+}
+
+#testimonials {
+  display: grid;
+  grid-template-columns: 25% 25% 25%;
+  grid-column-gap: 10%;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  background-color: #cdd9d7;
+}
+
+.titletestimonials {
+  background-color: #cdd9d7;
+  width: 100vw;
+  padding-top: 20px;
+}
+
 .testimonialsImg {
-  /* width: 80%;
-  height: 100%; */
   max-width: 100%;
   height: auto;
   margin: 30px 0 20px 0;
 }
 
-.advantageImg img,
 .testimonials img {
   width: 50%;
-  border-radius: 30px;
 }
 
 .reasons-why {
@@ -133,7 +160,7 @@ section {
 }
 
 section a {
-  background-color: #67aa1a;
+  background-color: #7db094;
   text-decoration: none;
   color: white;
   font-size: 30px;
