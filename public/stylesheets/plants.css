@@ -6,6 +6,7 @@
 #plantsContainer {
   display: flex;
   flex-direction: row;
+  margin-top: 70px;
 }
 
 #plantsContainer li {
@@ -17,7 +18,7 @@ aside {
   width: 20%;
   padding-left: 10px;
   padding-top: 10px;
-  background-color: #7db0a4;
+  background-color: #7db094;
   color: white;
   box-shadow: 5px 0px 6px -4px rgba(125, 176, 164, 0.6);
 }
@@ -96,6 +97,7 @@ aside h3 {
   width: 100%;
   font-size: 50px;
   margin: 20px 0;
+  text-align: center;
 }
 
 .plant-mini {
@@ -159,8 +161,11 @@ aside h3 {
   position: absolute;
   top: 10px;
   right: 50px;
-  background-color: white;
-  color: black;
+  z-index: 10;
+}
+
+.fa-heart .white {
+  color: white;
 }
 
 .fav.is-active {
