@@ -59,18 +59,20 @@ router.post('/survey', (req, res, next) => {
 
 /* GET the user profile page */
 
-user
-	.findOne({ email: req.session.currentUser.email })
-	.then((dbRes) => {
-		console.log('ici', dbRes);
-		res.render('users/user_profile', { user: dbRes });
-	})
-	// .then(dbRes => {
-	//   res.render("plants/all_plants", { plants: dbRes });
-	// })
-	.catch((error) => {
-		console.log(error);
-	});
+router.get('/profile', (req, res) => {
+	user
+		.findOne({ email: req.session.currentUser.email })
+		.then((dbRes) => {
+			console.log('ici', dbRes);
+			res.render('users/user_profile', { user: dbRes });
+		})
+		.then((dbRes) => {
+			res.render('plants/all_plants', { plants: dbRes });
+		})
+		.catch((error) => {
+			console.log(error);
+		});
+});
 
 /* GET the page showing ONE plant */
 router.get('/plants/:id', (req, res, next) => {
@@ -84,18 +86,6 @@ router.get('/plants/:id', (req, res, next) => {
 		});
 
 });
-//   user
-//     .findOne({ email: req.session.currentUser.email })
-//     .then(dbRes => {
-//       console.log("ici", dbRes);
-//       res.render("users/user_profile", { user: dbRes });
-//     })
-//     // .then(dbRes => {
-//     //   res.render("plants/all_plants", { plants: dbRes });
-//     // })
-//     .catch(error => {
-//       console.log(error);
-// });
 
 router.get('/map', (req, res) => {
 	res.render('users/map');
