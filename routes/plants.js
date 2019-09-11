@@ -3,6 +3,8 @@ const router = express.Router();
 const PlantModel = require("./../models/Plant");
 const UserModel = require("./../models/User");
 
+/*Create an index to allo text searc
+
 /*GET all plants catalog*/
 
 router.get("/plants", (req, res) => {
@@ -46,11 +48,32 @@ router.post("/plants/filter", (req, res) => {
     .catch(err => console.log(err));
 });
 
+/*search*/
+
+router.post("/plants/search", (req, res) => {
+  let query = req.body.search;
+  if (req.body.search.length === 0) {
+    PlantModel.find()
+      .then(dbRes => {
+        console.log("response", dbRes);
+        res.send(dbRes);
+      })
+      .catch(err => console.log(err));
+  } else {
+    console.log("req", req.body.search);
+    PlantModel.find({ $text: { $search: query } })
+      .then(dbRes => {
+        console.log("response", dbRes);
+        res.send(dbRes);
+      })
+      .catch(err => console.log(err));
+  }
+});
+
 /* GET the page showing ONE plant */
 
 router.get("/plants/:id", (req, res, next) => {
-  plantModel
-    .findById(req.params.id)
+  PlantModel.findById(req.params.id)
     .then(dbRes => {
       res.render("plants/one_plant", { plant: dbRes });
     })
