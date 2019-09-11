@@ -56,7 +56,9 @@ router.post('/survey', (req, res, next) => {
 		.catch((err) => console.log(err));
 });
 
+
 /* GET the user profile page */
+
 user
 	.findOne({ email: req.session.currentUser.email })
 	.then((dbRes) => {
@@ -80,7 +82,20 @@ router.get('/plants/:id', (req, res, next) => {
 		.catch((error) => {
 			console.log(error);
 		});
+
 });
+//   user
+//     .findOne({ email: req.session.currentUser.email })
+//     .then(dbRes => {
+//       console.log("ici", dbRes);
+//       res.render("users/user_profile", { user: dbRes });
+//     })
+//     // .then(dbRes => {
+//     //   res.render("plants/all_plants", { plants: dbRes });
+//     // })
+//     .catch(error => {
+//       console.log(error);
+// });
 
 router.get('/map', (req, res) => {
 	res.render('users/map');
