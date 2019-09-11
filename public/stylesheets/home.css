@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,7 @@ header {
 header a {
   background-color: #67aa1a;
   text-decoration: none;
-  color: #F1F0eb;
+  color: #f1f0eb;
   font-size: 30px;
   padding: 20px;
   border-radius: 30px;
@@ -23,17 +22,16 @@ header * {
   padding: 20px;
 }
 
-h1 {
+.home-title {
   text-align: center;
   font-size: 100px;
-  color: #F1F0eb;
+  color: #f1f0eb;
   text-shadow: 3px 5px 2px #1b423a;
-  margin: 0 0 0 0;
 }
 
 h2 {
   font-size: 30px;
-  color: #F1F0eb;
+  color: #f1f0eb;
   text-shadow: 2px 3px 1px #1b423a;
   margin: 0 0 30px 0;
 }
@@ -47,7 +45,7 @@ h3 {
 }
 
 .name {
-  color: #336F5F;
+  color: #336f5f;
   justify-content: center;
 }
 
@@ -108,7 +106,7 @@ section {
 .testimonialsImg {
   /* width: 80%;
   height: 100%; */
-  max-width: 100%; 
+  max-width: 100%;
   height: auto;
   margin: 30px 0 20px 0;
 }
@@ -135,13 +133,13 @@ section {
 }
 
 section a {
-    background-color: #67aa1a ;
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    padding: 20px;
-    border-radius: 30px;
-    margin: 20px 0 40px 0;
+  background-color: #67aa1a;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  border-radius: 30px;
+  margin: 20px 0 40px 0;
 }
 
 #advantages {

@@ -1,5 +1,86 @@
+/* User's profile */
 * {
   margin: 0;
   padding: 0;
 }
 
+#secondary-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100vw;
+  background-color: #80cc84;
+  /* padding: 20px; */
+  position: static;
+  margin-top: 70px;
+  height: 220px;
+  font-style: #f1f0eb;
+  z-index: 11;
+}
+
+.user-profile-title {
+  text-align: start;
+  justify-content: flex-start;
+  font-size: 50px;
+  color: #f1f0eb;
+  text-shadow: 3px 5px 2px #1b423a;
+  margin: 0 0 0 30px;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  width: 200px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.edit-icon {
+  width: 30px;
+  height: auto;
+}
+
+/* table to edit the user info */
+table.greenTable {
+  font-family: Georgia, serif;
+  border: 6px solid #80cc84;
+  /* background-color: #d4eed1; */
+  background-color: white;
+  width: 30%;
+  text-align: center;
+}
+td {
+  background-color: #f1f0eb;
+}
+th {
+  background-color: #80cc84;
+}
+table.greenTable td,
+table.greenTable th {
+  border: 1px solid #80cc84;
+  padding: 3px 2px;
+}
+/* table.greenTable tbody td {
+  font-size: 40px;
+} */
+table.greenTable thead {
+  background: #24943a;
+  /* background: -moz-linear-gradient(top, #5baf6b 0%, #3a9e4d 66%, #24943a 100%); */
+  /* background: -webkit-linear-gradient( */
+  /* top,
+    #5baf6b 0%,
+    #3a9e4d 66%,
+    #24943a 100%
+  ); */
+  /* background: linear-gradient(to bottom, #5baf6b 0%, #3a9e4d 66%, #24943a 100%); */
+  border-bottom: 0px solid #444444;
+}
+table.greenTable thead th {
+  font-size: 19px;
+  font-weight: bold;
+  color: #f0f0f0;
+  text-align: left;
+  border-left: 2px solid #80cc84;
+}
+table.greenTable thead th:first-child {
+  border-left: none;
+}
