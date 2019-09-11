@@ -24,9 +24,10 @@ router.get("/profile", (req, res) => {
       console.log(error);
     });
 });
+
 router.get("/map", (req, res) => {
   res.render("users/map");
-});
+
 
 router.get("/map/api", (req, res) => {
   gardenCenter
