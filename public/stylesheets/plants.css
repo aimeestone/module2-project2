@@ -16,6 +16,7 @@
 /*plants filter*/
 aside {
   width: 20%;
+  min-height: 100vh;
   padding-left: 10px;
   padding-top: 10px;
   background-color: #7db094;
@@ -180,4 +181,9 @@ aside h3 {
 
 .onePlantImg img {
   width: 100%;
+}
+
+.fas.fa-search{
+  color: #1b423a;
+  margin-left: 10px;
 }
