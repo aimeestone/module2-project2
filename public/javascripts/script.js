@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {});
 
-const allPlants = document.getElementById("allPlants");
+// const allPlants = document.getElementById("allPlants");
+var grid = document.getElementById("grid");
+var container = document.getElementById("container");
 
 const filters = document.getElementById("filter").querySelectorAll("input");
 filters.forEach(filter => {
@@ -39,21 +41,73 @@ filters.forEach(filter => {
         type: type
       })
       .then(dbRes => {
-        allPlants.innerHTML = "";
+        grid.innerHTML = "";
+        grid.innerHTML = `<div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>`;
         dbRes.data.forEach(plant => {
-          allPlants.innerHTML += `<div class="plant-mini">
-      <div class="plant-mini-img">
-        <a href="/plants/${plant._id}"><img src="${plant.avatar}" alt="${plant.name}"></a>
-      </div>
-      <a href="/plants/${plant._id}">
-        <h4>${plant.name}</h4>
-      </a>
-    </div>`;
+          grid.innerHTML += `
+          <div class="plant-mini grid-item">
+          <a class="plantsInfo" href="/plants/${plant._id}"> <div>
+            <span class="fav" data-id="${plant._id}">Heart</span>
+            <h4>${plant.name}</h4>
+        </div></a>
+        <div class="plant-mini-img">
+         <img src="${plant.avatar}" alt="plant-img">
+        </div>
+      </div>`;
+          const msnry = new Masonry(grid, {
+            itemSelector: ".grid-item",
+            columnWidth: ".grid-sizer",
+            gutter: ".gutter-sizer",
+            percentPosition: true
+          });
+          imagesLoaded(grid).on("progress", function() {
+            // layout Masonry after each image loads
+            msnry.layout();
+          });
         });
       })
       .catch(error => console.log(error));
   };
 });
+
+const searchBtn = document.getElementById("searchBtn");
+console.log(searchBtn);
+searchBtn.onclick = () => {
+  console.log("coucou");
+  const search = document.getElementById("search").value;
+  axios
+    .post("http://localhost:3000/plants/search", { search: search })
+    .then(dbRes => {
+      grid.innerHTML = "";
+      grid.innerHTML = `<div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>`;
+      console.log(dbRes);
+      dbRes.data.forEach(plant => {
+        grid.innerHTML += `
+        <div class="plant-mini grid-item">
+        <a class="plantsInfo" href="/plants/${plant._id}"> <div>
+          <span class="fav" data-id="${plant._id}">Heart</span>
+          <h4>${plant.name}</h4>
+      </div></a>
+      <div class="plant-mini-img">
+       <img src="${plant.avatar}" alt="plant-img">
+      </div>
+    </div>`;
+        const mas = new Masonry(grid, {
+          itemSelector: ".grid-item",
+          columnWidth: ".grid-sizer",
+          gutter: ".gutter-sizer",
+          percentPosition: true
+        });
+        imagesLoaded(grid).on("progress", function() {
+          // layout Masonry after each image loads
+          mas.layout();
+        });
+      });
+    })
+    .catch(err => console.log(err));
+};
 
 const heart = document.querySelectorAll(".fav");
 
@@ -71,4 +125,18 @@ heart.forEach(fav => {
       .then(dbRes => console.log(dbRes))
       .catch(err => console.log(err));
   };
+});
+
+/* Masonery Grid*/
+
+var msnry = new Masonry(grid, {
+  itemSelector: ".grid-item",
+  columnWidth: ".grid-sizer",
+  gutter: ".gutter-sizer",
+  percentPosition: true
+});
+
+imagesLoaded(grid).on("progress", function() {
+  // layout Masonry after each image loads
+  msnry.layout();
 });

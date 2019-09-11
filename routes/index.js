@@ -59,26 +59,12 @@ router.post("/survey", (req, res, next) => {
 });
 
 /* GET the user profile page */
+router.get("/profile", (req, res) => {
+  console.log("current user", req.session.currentUser);
   user
     .findOne({ email: req.session.currentUser.email })
     .then(dbRes => {
-      console.log("ici", dbRes);
       res.render("users/user_profile", { user: dbRes });
-    })
-    // .then(dbRes => {
-    //   res.render("plants/all_plants", { plants: dbRes });
-    // })
-    .catch(error => {
-      console.log(error);
-    });
-});
-
-/* GET the page showing ONE plant */
-router.get("/plants/:id", (req, res, next) => {
-  plantModel
-    .findById(req.params.id)
-    .then(dbRes => {
-      res.render("plants/one_plant", { plant: dbRes });
     })
     .catch(error => {
       console.log(error);
