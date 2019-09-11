@@ -1,5 +1,5 @@
 #content_signup {
-  background-image: url("../images/chris-lee-70l1tDAI6rM-unsplash.jpg");
+  background-image: url("../images/cactus_signup.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -13,16 +13,17 @@
   border-radius: 20px;
   padding: 20px;
   background-color: white;
-  box-shadow: 0px 0px 10px 8px rgb(58, 58, 58);
+  box-shadow: 0px 0px 10px 8px #9db5a6;
   height: 830px;
+  width: 600px;;
 }
 
 .title_signup {
   text-align: center;
   font-size: 80px;
-  color: #B4C027;
-  text-shadow: 3px 5px 2px #1b423a;
-  margin: 0 0 0 0;
+  color: #1b423a;
+  margin: 0;
+  width: 100%;
 }
 
 #form {
@@ -42,7 +43,7 @@
 }
 
 .button_signup {
-  background-color: #1b423a;
+  background-color: #7db094;
   text-decoration: none;
   color: #F1F0eb;
   font-size: 30px;
@@ -68,7 +69,7 @@
   border: none;
   padding: 20px;
   font-size: 20px;
-  background-color: #67aa1a;
+  background-color: #1b423a;
   color: white;
   text-align: center;
 }
