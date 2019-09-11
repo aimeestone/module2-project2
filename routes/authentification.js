@@ -27,7 +27,7 @@ router.post("/signup", cloudinary.single("avatar"), (req, res) => {
         const hashed = bcrypt.hashSync(newUser.password, salt);
         newUser.password = hashed;
 
-        if (req.fil) {
+        if (req.file) {
           newUser.avatar = req.file.secure_url;
         }
 

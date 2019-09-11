@@ -5,6 +5,7 @@
 @import url("/stylesheets/login.css");
 @import url("/stylesheets/map.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("/stylesheets/user_profile.css");
 
 * {
   box-sizing: border-box;
@@ -20,5 +21,3 @@ light green: #7db0a4
 extra light green: #cdd9d7
 
 */
-
-/* HOME*/
