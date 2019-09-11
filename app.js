@@ -90,7 +90,9 @@ hbs.registerPartials(path.join(__dirname, "/views/partials"));
 
 const index = require("./routes/index");
 const authRouter = require("./routes/authentification");
+const plantRouter = require("./routes/plants");
 app.use("/", index);
 app.use(authRouter);
+app.use(plantRouter);
 
 module.exports = app;
