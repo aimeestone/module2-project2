@@ -35,7 +35,7 @@ filters.forEach(filter => {
       }
     });
     axios
-      .post("http://localhost:3000/plants/filter", {
+      .post("/plants/filter", {
         outside: outside,
         lighting: lighting,
         humidity: humidity,
@@ -81,7 +81,7 @@ searchBtn.onclick = () => {
   console.log("coucou");
   const search = document.getElementById("search").value;
   axios
-    .post("http://localhost:3000/plants/search", { search: search })
+    .post("/plants/search", { search: search })
     .then(dbRes => {
       grid.innerHTML = "";
       grid.innerHTML = `<div class="grid-sizer"></div>
@@ -127,7 +127,7 @@ heart.forEach(fav => {
       }
     });
     axios
-      .post("http://localhost:3000/plants/fav", { hearts: favarr })
+      .post("/plants/fav", { hearts: favarr })
       .then(dbRes => console.log(dbRes))
       .catch(err => console.log(err));
   };
