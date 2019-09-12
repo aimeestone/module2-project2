@@ -7,6 +7,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url("/stylesheets/user_profile.css");
 @import url("/stylesheets/one_plant.css");
+@import url("/stylesheets/responsive.css");
 
 * {
   box-sizing: border-box;
