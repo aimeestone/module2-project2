@@ -31,12 +31,15 @@ router.post('/signup', cloudinary.single('avatar'), (req, res) => {
 					newUser.avatar = req.file.secure_url;
 				}
 
-				UserModel.create(newUser)
-					.then((response) => res.redirect('/plants'))
-					.catch((error) => console.log(error));
-			}
-		})
-		.catch((dberr) => console.log(dberr));
+        UserModel.create(newUser)
+          .then(response => {
+            req.session.currentUser = newUser;
+            res.redirect(`/profile`);
+          })
+          .catch(error => console.log(error));
+      }
+    })
+    .catch(dberr => console.log(dberr));
 });
 
 router.get('/login', (req, res) => {

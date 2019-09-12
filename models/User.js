@@ -32,7 +32,7 @@ const user = new Schema({
   favorite_plants: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Plant"
+      ref: "Plants"
     }
   ]
 });
