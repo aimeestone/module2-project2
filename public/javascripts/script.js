@@ -1,8 +1,53 @@
-document.addEventListener("DOMContentLoaded", () => {});
+document.addEventListener("DOMContentLoaded", () => {
+  userLoggedIn();
+  saveFavPlants();
+  heart();
+});
 
 // const allPlants = document.getElementById("allPlants");
 var grid = document.getElementById("grid");
 var container = document.getElementById("container");
+var user;
+/*user is loggedIn*/
+
+function userLoggedIn() {
+  axios
+    .post("/user")
+    .then(dbRes => {
+      if (dbRes.data === true) {
+        return (user = true);
+      }
+      if (dbRes.data === false) {
+        return (user = false);
+      }
+    })
+    .catch(err => console.log(err));
+}
+
+function plantMini(plant, grid) {
+  if (user === true) {
+    grid.innerHTML += `
+    <div class="plant-mini grid-item">
+  <i class="fav fas fa-heart white" data-id="${plant._id}"></i>
+    <a class="plantsInfo" href="/plants/${plant._id}"> <div>
+      <h4>${plant.name}</h4>
+  </div></a>
+  <div class="plant-mini-img">
+   <img src="${plant.avatar}" alt="plant-img">
+  </div>
+</div>`;
+  } else {
+    grid.innerHTML += `
+    <div class="plant-mini grid-item">
+    <a class="plantsInfo" href="/plants/${plant._id}"> <div>
+      <h4>${plant.name}</h4>
+  </div></a>
+  <div class="plant-mini-img">
+   <img src="${plant.avatar}" alt="plant-img">
+  </div>
+</div>`;
+  }
+}
 
 /*filters*/
 
@@ -35,7 +80,7 @@ filters.forEach(filter => {
       }
     });
     axios
-      .post("http://localhost:3000/plants/filter", {
+      .post("/plants/filter", {
         outside: outside,
         lighting: lighting,
         humidity: humidity,
@@ -47,16 +92,7 @@ filters.forEach(filter => {
         grid.innerHTML = `<div class="grid-sizer"></div>
         <div class="gutter-sizer"></div>`;
         dbRes.data.forEach(plant => {
-          grid.innerHTML += `
-          <div class="plant-mini grid-item">
-        <i class="fav fas fa-heart white" data-id="${plant._id}"></i>
-          <a class="plantsInfo" href="/plants/${plant._id}"> <div>
-            <h4>${plant.name}</h4>
-        </div></a>
-        <div class="plant-mini-img">
-         <img src="${plant.avatar}" alt="plant-img">
-        </div>
-      </div>`;
+          plantMini(plant, grid);
           const msnry = new Masonry(grid, {
             itemSelector: ".grid-item",
             columnWidth: ".grid-sizer",
@@ -68,6 +104,8 @@ filters.forEach(filter => {
             msnry.layout();
           });
         });
+        saveFavPlants();
+        heart();
       })
       .catch(error => console.log(error));
   };
@@ -81,23 +119,14 @@ searchBtn.onclick = () => {
   console.log("coucou");
   const search = document.getElementById("search").value;
   axios
-    .post("http://localhost:3000/plants/search", { search: search })
+    .post("/plants/search", { search: search })
     .then(dbRes => {
       grid.innerHTML = "";
       grid.innerHTML = `<div class="grid-sizer"></div>
         <div class="gutter-sizer"></div>`;
       console.log(dbRes);
       dbRes.data.forEach(plant => {
-        grid.innerHTML += `
-        <div class="plant-mini grid-item">
-        <i class="fav fas fa-heart white" data-id="${plant._id}"></i>
-        <a class="plantsInfo" href="/plants/${plant._id}"> <div>
-          <h4>${plant.name}</h4>
-      </div></a>
-      <div class="plant-mini-img">
-       <img src="${plant.avatar}" alt="plant-img">
-      </div>
-    </div>`;
+        plantMini(plant, grid);
         const mas = new Masonry(grid, {
           itemSelector: ".grid-item",
           columnWidth: ".grid-sizer",
@@ -109,29 +138,50 @@ searchBtn.onclick = () => {
           mas.layout();
         });
       });
+      saveFavPlants();
+      heart();
     })
     .catch(err => console.log(err));
 };
 
+function saveFavPlants() {
+  axios
+    .post("/plants/savefav")
+    .then(response => {
+      response.data.favorite_plants.forEach(plant => {
+        document.querySelectorAll(".fav").forEach(heart => {
+          if (heart.dataset.id === plant) {
+            heart.classList.toggle("is-active");
+          }
+        });
+      });
+    })
+    .catch(error => console.log(error));
+}
+
 /*add to favorites*/
 
-const heart = document.querySelectorAll(".fav");
+function favoritesPlant(target) {
+  target.classList.toggle("is-active");
+  let favarr = [];
+  document.querySelectorAll(".fav").forEach(heart => {
+    if (heart.classList.contains("is-active")) {
+      favarr.push(heart.dataset.id);
+    }
+  });
+  axios
+    .post("/plants/fav", { hearts: favarr })
+    .then(dbRes => console.log(dbRes))
+    .catch(err => console.log(err));
+}
 
-heart.forEach(fav => {
-  fav.onclick = function({ target }) {
-    target.classList.toggle("is-active");
-    let favarr = [];
-    document.querySelectorAll(".fav").forEach(heart => {
-      if (heart.classList.contains("is-active")) {
-        favarr.push(heart.dataset.id);
-      }
-    });
-    axios
-      .post("http://localhost:3000/plants/fav", { hearts: favarr })
-      .then(dbRes => console.log(dbRes))
-      .catch(err => console.log(err));
-  };
-});
+function heart() {
+  document.querySelectorAll(".fav").forEach(fav => {
+    fav.onclick = function({ target }) {
+      favoritesPlant(target);
+    };
+  });
+}
 
 /* Masonery Grid*/
 
