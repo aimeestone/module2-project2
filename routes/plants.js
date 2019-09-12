@@ -9,7 +9,9 @@ const UserModel = require("./../models/User");
 
 router.get("/plants", (req, res) => {
   PlantModel.find()
-    .then(dbRes => res.render("plants/all_plants", { plants: dbRes }))
+    .then(dbRes =>
+      res.render("plants/all_plants", { plants: dbRes, script: "script.js" })
+    )
     .catch(err => console.log(err));
 });
 
