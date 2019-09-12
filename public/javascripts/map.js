@@ -32,7 +32,7 @@ function startMap() {
 
 function getGardenCenter() {
 	axios
-		.get('http://localhost:3000/map/api')
+		.get('/map/api')
 		.then((response) => {
 			console.log(response);
 			placeGardenCenter(response.data);

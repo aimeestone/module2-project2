@@ -1,2 +1,44 @@
-<div class="content-profile">
-
+<div id="secondary-nav">
+ <img src="{{ user.avatar }}" class="user-avatar">
+ <h1 class="user-profile-title">Hi {{ user.name }},<br>nice to have you back!</h1>
+ {{!-- mettre un effet hover sur l'avatar avec un lien "change my profile picture" --}}
+</div>
+<div class="user-info">
+ <h2 class="">Edit your profile <img src="/images/edit.png" class="edit-icon"></h2>
+ {{#if msg}}
+ <span>{{msg}}</span>
+ {{/if}}
+ <form action="/profile/edit/{{user._id}}/name" method="POST">
+   <label for="name">name</label>
+   <input type="text" name="name" value="{{user.name}}">
+   <button>Edit</button>
+ </form>
+ <form action="/profile/edit/{{user._id}}/email" method="POST"><label for="email">email</label>
+   <input type="text" name="email" value="{{user.email}}">
+   <button>Edit</button>
+ </form>
+ <form action="/profile/edit/{{user._id}}/password" method="POST">
+   <label for="password">passwor</label>
+   <input type="password" name="password" value="{{user.password}}">
+   <button>Edit</button>
+ </form>
+ <form action="/profile/edit/{{user._id}}/avatar" method="POST" enctype="multipart/form-data">
+   <label for="avatar">avatar</label>
+   <input type="file" name="avatar" value="{{user.avatar}}">
+   <button>Edit</button>
+ </form>
+ <form action="/profile/{{user._id}}/delete" method="post">
+   <label for="">Delete your account</label>
+   <button>Delete</button>
+ </form>
+ <div class="user-likes">
+   <h2>Your favorite plants</h2>
+   {{#each user.favorite_plants}}
+   <div>
+     <h2>{{this.name }}</h2>
+     <div class="favplant">
+       <img src="{{this.avatar}}" alt="{{this.name}}">
+     </div>
+   </div>
+   {{/each}}
+ </div>
