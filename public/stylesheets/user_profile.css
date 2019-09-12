@@ -1,57 +1,115 @@
 /* User's profile */
-* {
-  margin: 0;
-  padding: 0;
-}
 
 .content-profile {
-  background-image: url("../images/profile.jpg");
+  /* background-image: url("../images/profile.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-repeat: no-repeat; */
+  height: 150vh;
   display: flex;
   justify-content: center;
-}
-
-#profile-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  justify-content: space-around;
-  margin: 70px 40px 0 40px;
-  height: 170px;
-  font-style: #acacac;
-  /* z-index: 11; */
 }
 
 .user-profile-title {
   text-align: start;
   justify-content: flex-start;
   font-size: 40px;
-  color: #80cc84;
+  color: #7db094;
   /* text-shadow: 3px 5px 2px #1b423a; */
   margin: 0 0 0 30px;
 }
 
-.user-info {
+/* .subtitles {
+  width: 70%;
+  justify-content: center;
+  color: #f1f0eb;
+} */
+
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  /* height: 100vh; */
+  height: 100%;
+  padding: 100px 0 100px 40px;
+  background-color: #7db094;
+  color: white;
+  box-shadow: 5px 0px 6px -4px rgba(125, 176, 164, 0.6);
+}
+
+/* #edit-profile {
+  justify-content: center;
+  text-align: start;
+  color: #f1f0eb;
+} */
+
+.input-name {
+  font-size: 20px;
+}
+
+#img-title {
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+#header2 {
+  /* justify-content: center;*/
+  text-align: start;
+  color: #f1f0eb;
+  padding-top: 20px;
+}
+
+.type-in {
+  height: 30px;
+  border-radius: 10px;
+}
+
+.edit-btn {
+  /* height: 20px;
+  width: 50px; */
+  background-color: #f1f0eb;
+  color: #7db094;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  margin-left: 20px;
+  /* margin: 20px 0 40px 0; */
+}
+
+.edit-btn span {
+  display: none;
+}
+
+.edit-item {
+  padding-bottom: 20px;
+}
+
+/* #profile-header {
   display: flex;
   flex-direction: row;
-  align-self: flex-end;
-  width: 400px;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  /* margin: 70px 40px 0 40px; */
+/* margin: 0; */
+/* font-style: #acacac; */
+/* z-index: 11; */
+/* } */
+
+.user-likes {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
   margin-bottom: 40px;
+  margin-top: 100px;
 }
 
 .user-avatar {
   border-radius: 50%;
+  justify-content: center;
   width: 150px;
   height: auto;
-  margin-left: 20px;
-}
-
-.edit-icon {
-  width: 30px;
-  height: auto;
+  /* margin-left: 20px; */
 }
 
 .save-changes {
@@ -66,10 +124,10 @@
 .delete {
   border-radius: 20px;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   background-color: rgb(165, 2, 2);
-  padding: 20px;
-  margin: 20px;
+  padding: 10px;
+  margin: 20px 10px 10px 10px;
 }
 
 /* table to edit the user info */
@@ -114,4 +172,127 @@ table.greenTable thead th:first-child {
 
 .favplant img {
   width: 100%;
+}
+
+/* ALL PLANTS CLASSES & IDS */
+
+* {
+  box-sizing: border-box;
+}
+
+/* All plants*/
+#plantsContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 70px;
+}
+
+#plantsContainer li {
+  list-style-type: none;
+}
+
+/*plants catalog*/
+
+#plantFavorites {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  padding-left: 10px;
+}
+
+#plantFavorites h1 {
+  width: 100%;
+  font-size: 50px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.plant-mini {
+  position: relative;
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2px;
+}
+/*Masonery grid*/
+
+#gridProfile {
+  width: 100%;
+  clear: both;
+}
+
+.grid-sizer {
+  width: 33%;
+}
+.grid-item {
+  width: 33%;
+  float: left;
+}
+.gutter-sizer {
+  width: 4px;
+}
+
+.plant-mini-img {
+  height: 100%;
+}
+
+.plant-mini-img img {
+  width: 100%;
+}
+
+/*hover div*/
+
+.plantsInfo {
+  position: absolute;
+  text-decoration: none;
+  color: rgba(35, 48, 28, 0);
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.plantsInfo:hover {
+  color: rgba(35, 48, 28, 1);
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: background-color linear 0.5s;
+}
+
+.fav {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  z-index: 10;
+  color: white;
+}
+
+.fas.fa-heart.white {
+  color: white;
+}
+
+.fav.fas.fa-heart.white.is-active {
+  color: red;
+}
+
+/*One plant*/
+
+.onePlantImg {
+  width: 25%;
+}
+
+.onePlantImg img {
+  width: 100%;
+}
+
+.fas.fa-search {
+  color: #1b423a;
+  margin-left: 10px;
 }
