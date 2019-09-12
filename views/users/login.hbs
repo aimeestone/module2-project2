@@ -1,23 +1,22 @@
 <div id="content_login">
-<div id="login">
+  <div id="login">
 
-{{#if msg}}
-<span>{{msg}}</span>
-{{/if}}
 
-<h2 class="welcome">Welcome back !<br>
-Give your plant some love <i class="fas fa-heart"></i></h2>
+    <h2 class="welcome">Welcome back !<br>
+      Give your plant some love <i class="fas fa-heart"></i></h2>
+    {{#if msg}}
+    <p class="errormessage">{{msg}}</p>
+    {{/if}}
+    <div id="form">
+      <form class="form" action="/login" method="post">
+        <label class="email" for="email">Email</label>
+        <input class="input" id="email" type="email" name="email" required placeholder="email" value="lola@foo.com">
+        <label class="password" for="password">Password</label>
+        <input class="input" id="password" type="password" name="password" required placeholder="password" value="1234">
+        <button class="button">Login</button>
+      </form>
 
-<div id="form">
-<form class="form" action="/login" method="post">
-  <label class="email" for="email">Email</label>
-  <input class="input" id="email" type="email" name="email" required placeholder="email" value="lola@foo.com">
-  <label class="password" for="password">Password</label>
-  <input class="input" id="password" type="password" name="password" required placeholder="password" value="1234">
-  <button class="button">Login</button>
-</form>
-
-<p>Don't have an account yet ? <a href="/signup">Sign Up</a></p>
-</div>
-</div>
+      <p>Don't have an account yet ? <a href="/signup">Sign Up</a></p>
+    </div>
+  </div>
 </div>

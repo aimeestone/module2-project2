@@ -12,7 +12,7 @@ nav {
   height: 70px;
   font-style: #f1f0eb;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
 }
 
 h1 {
