@@ -8,6 +8,8 @@
 @import url("/stylesheets/user_profile.css");
 @import url("/stylesheets/one_plant.css");
 @import url("/stylesheets/responsive.css");
+@import url("/stylesheets/login_responsive.css");
+@import url("/stylesheets/signup_responsive.css");
 
 * {
   box-sizing: border-box;
