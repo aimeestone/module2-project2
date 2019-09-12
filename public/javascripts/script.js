@@ -175,6 +175,7 @@ function favoritesPlant(target) {
     .catch(err => console.log(err));
 }
 
+
 function heart() {
   document.querySelectorAll(".fav").forEach(fav => {
     fav.onclick = function({ target }) {
@@ -182,6 +183,7 @@ function heart() {
     };
   });
 }
+
 
 /* Masonery Grid*/
 

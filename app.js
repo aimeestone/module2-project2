@@ -11,9 +11,13 @@ const path = require("path");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 require("./config/cloudinary");
+// require("./bin/garden_center_seeds.js");
+// require("./bin/plants_seeds.js");
 
 mongoose
-  .connect("mongodb://localhost:27017/plant-project", { useNewUrlParser: true })
+  .connect(`${process.env.MONGODB_URI}`, {
+    useNewUrlParser: true
+  })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
