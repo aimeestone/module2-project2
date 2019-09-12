@@ -100,4 +100,12 @@ router.post("/plants/fav", (req, res) => {
     .catch(err => console.log(err));
 });
 
+router.post("/plants/savefav", (req, res) => {
+  UserModel.findOne({ email: req.session.currentUser.email })
+    .then(response => {
+      res.send(response);
+    })
+    .catch(error => console.log(err));
+});
+
 module.exports = router;

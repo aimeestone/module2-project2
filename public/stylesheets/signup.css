@@ -8,14 +8,14 @@
 }
 
 #signup {
-  margin-top : 100px;
+  margin-top: 100px;
   border: 2px solid white;
   border-radius: 20px;
   padding: 20px;
   background-color: white;
   box-shadow: 0px 0px 10px 8px #9db5a6;
   height: 830px;
-  width: 600px;;
+  width: 600px;
 }
 
 .title_signup {
@@ -45,18 +45,18 @@
 .button_signup {
   background-color: #7db094;
   text-decoration: none;
-  color: #F1F0eb;
+  color: #f1f0eb;
   font-size: 30px;
   padding: 7px 80px;
   border-radius: 20px;
   margin-top: 25px;
 }
 
-.button:hover{
+.button:hover {
   cursor: pointer;
 }
 
-.label{
+.label {
   margin: 20px 0;
 }
 
@@ -72,4 +72,11 @@
   background-color: #1b423a;
   color: white;
   text-align: center;
+}
+
+.errormessage {
+  width: 100%;
+  text-align: center;
+  color: #b44a22;
+  margin: 0;
 }
