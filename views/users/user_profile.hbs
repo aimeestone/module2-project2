@@ -1,105 +1,88 @@
-<div id="secondary-nav">
-  <img src="{{ user.avatar }}" class="user-avatar">
-  <h1 class="user-profile-title">Hi {{ user.name }},<br>nice to have you back!</h1>
-  {{!-- mettre un effet hover sur l'avatar avec un lien "change my profile picture" --}}
-</div>
+<div class="content-profile">
 
-<div class="user-info">
-  <h2 class="">Edit your profile <img src="/images/edit.png" class="edit-icon"></h2>
+  <div id="profile-header">
+    <img src="{{ user.avatar }}" class="user-avatar">
 
-  {{#if msg}}
-  <span>{{msg}}</span>
-  {{/if}}
+    <h1 class="user-profile-title">Hi {{ user.name }}, welcome back!</h1>
 
-  <form method="post" action="/profile" id="user_test"></form>
-  <table class="info-manage-table greenTable">
-    <thead>
-      <tr class="table-row">
-        <th class="table-head">Your info</th>
-        <th class="table-head">Edit your personal info</th>
-      </tr>
-      <tr>
-        <td>
-          <label for="name">Your name</label>
-        </td>
-        <td>
-          <input id="name" type="name" name="name" required placeholder="{{ user.name }}" value="{{ user.name }}">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="email">Your email</label>
-        </td>
-        <td>
-          <input id="email" type="email" name="email" required placeholder="{{ user.email }}" value="{{ user.email }}">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="password">Choose a new password</label>
-        </td>
-        <td>
-          <input id="password" type="password" placeholder="••••••" required value="{{user.password}}" name="password">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="avatar">Edit your profile picture</label>
-        </td>
-        <td>
-          <input id="avatar" type="file" name="avatar">
-        </td>
-      </tr>
-      <tr>
-        <td>Delete my account</td>
-        <td>
-          <button>Are you sure?</button>
-        </td>
-      </tr>
-    </thead>
+    <a href="#profile-info">Edit your profile<img src="/images/edit.png" class="edit-icon"></a>
 
-    <tbody>
-      {{#each users}}
-      <tr class="table-row">
-        {{ user.name }}
-      </tr>
-      <tr>
-        {{ user.email }}
-      </tr>
-      <tr>
-        {{ user.password }}
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
-</div>
-
-<button>Save my changes</button>
-</form>
-
-
-{{!-- ----------------------- --}}
-
-
-<div class="user-likes">
-  <h2>Your favorite plants</h2>
-
-  <h3>Flowering plants</h3>
-
-  <h3>Green plants</h3>
-
-  <div>
-    <h2>{{ plant.name }}</h2>
-    <p>Description:<br>{{ plant.description }}</p>
-    <p>
-      How to take good care of it:<br> {{ plant.advice }}
-    </p>
-    <ul>Best environment to grow in:
-      <li>Lighting: {{ plant.environment.lighting }}</li>
-      <li>Humidity: {{ plant.environment.humidity }}</li>
-      <li>Pet friendliness: {{ plant.environment.animals }}</li>
-      <li>Type of plant: {{ plant.environment.type_of_plant }}</li>
-    </ul>
   </div>
+
+  <div class="user-likes">
+    <h2>Your favorite plants</h2>
+
+    <div>
+      <h2>{{ plant.name }}</h2>
+      <div class="onePlantImg">
+        <img src="{{plant.avatar}}" alt="{{plant.name}}">
+      </div>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="user-info">
+    <form method="post" action="/profile" id="user_test">
+
+      <table id="profile-info" class="info-manage-table greenTable">
+        <thead>
+          <tr class="table-row">
+            <th class="table-head">Your info</th>
+            <th class="table-head">Edit your personal info</th>
+          </tr>
+          <tr>
+            <td>
+              <label for="name">Your name</label>
+            </td>
+            <td>
+              <input id="name" type="name" name="name" required placeholder="{{ user.name }}" value="{{ user.name }}">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email">Your email</label>
+            </td>
+            <td>
+              <input id="email" type="email" name="email" required placeholder="{{ user.email }}"
+                value="{{ user.email }}">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password">Choose a new password</label>
+            </td>
+            <td>
+              <input id="password" type="password" placeholder="••••••" required value="{{user.password}}"
+                name="password">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="avatar">Edit your profile picture</label>
+            </td>
+            <td>
+              <input id="avatar" type="file" name="avatar">
+            </td>
+          </tr>
+        </thead>
+      </table>
+
+
+      {{#if msg}}
+      <span>{{msg}}</span>
+      {{/if}}
+
+      <button class="save-changes">Save my changes</button>
+    </form>
+
+    <form>
+      <p>Delete my account</p>
+      <button class="delete">Are you sure?</button>
+    </form>
+
+  </div>
+
+</div>
 
 </div>

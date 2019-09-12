@@ -6,11 +6,13 @@
 @import url("/stylesheets/map.css");
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url("/stylesheets/user_profile.css");
+@import url("/stylesheets/one_plant.css");
 
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
+  /* font-family: "Nunito", sans-serif; */
 }
 
 /*color palette
@@ -19,5 +21,4 @@ dark green: #1b423a
 blue green: #7db094
 light green: #7db0a4
 extra light green: #cdd9d7
-
 */
