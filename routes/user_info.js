@@ -11,7 +11,11 @@ function profile(res, req, message) {
     .findOne({ _id: req })
     .then(answer => {
       console.log("answer", answer);
-      res.render("users/user_profile", { user: answer, msg: message });
+      res.render("users/user_profile", {
+        user: answer,
+        msg: message,
+        script: "profile_script.js"
+      });
     })
     .catch(errors => {
       console.log(errors);
@@ -24,7 +28,8 @@ router.get("/profile", (req, res) => {
     .populate("favorite_plants")
     .then(dbRes => {
       res.render("users/user_profile", {
-        user: dbRes
+        user: dbRes,
+        script: "profile_script.js"
       });
     })
     .catch(error => {
