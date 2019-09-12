@@ -8,8 +8,8 @@ router.get('/', (req, res, next) => {
 	res.render('index');
 });
 
-router.get("/map", (req, res) => {
-  res.render("users/map");
+router.get('/map', (req, res) => {
+	res.render('users/map', { script: 'map.js' });
 });
 
 router.get('/map/api', (req, res) => {
