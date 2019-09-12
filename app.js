@@ -11,8 +11,8 @@ const path = require("path");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
 require("./config/cloudinary");
-require("./bin/garden_center_seeds.js");
-require("./bin/plants_seeds.js");
+// require("./bin/garden_center_seeds.js");
+// require("./bin/plants_seeds.js");
 
 mongoose
   .connect(`${process.env.MONGODB_URI}`, {
