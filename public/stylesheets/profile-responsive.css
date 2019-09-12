@@ -1,0 +1,229 @@
+/* phones */
+/* from 413px */
+@media screen and (max-width: 413px) {
+  aside {
+    width: 40%;
+  }
+
+  .type-in {
+    font-size: 10px;
+    width: 50%;
+  }
+  .avatarContainer {
+    width: 80px;
+    height: 80px;
+  }
+
+  #edit-profile {
+    padding: 0;
+  }
+
+  #header2 {
+    font-size: 12px;
+  }
+
+  .input-name {
+    font-size: 10px;
+  }
+
+  .delete {
+    padding: 5px;
+    margin-top: 20px;
+    width: 80%;
+    font-size: 10px;
+  }
+
+  #delete {
+    margin-top: 0px;
+  }
+
+  .subtitles {
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+  }
+
+  #plantFavorites h1 {
+    font-size: 20px;
+  }
+
+  .favgrid-item,
+  .favgrid-sizer {
+    width: 90%;
+  }
+
+  .fav {
+    top: 10px;
+    right: 10px;
+  }
+
+  .fas.fa-heart.white {
+    font-size: 20px;
+  }
+
+  #file {
+    font-size: 8px;
+  }
+}
+
+/* big phones / small tablet */
+/* from 415px to 767px */
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  aside {
+    width: 30%;
+  }
+
+  .avatarContainer {
+    width: 80px;
+    height: 80px;
+  }
+
+  #edit-profile {
+    padding: 0;
+  }
+
+  #header2 {
+    font-size: 18px;
+  }
+  .user-likes {
+    width: 100%;
+  }
+
+  .input-name {
+    font-size: 15px;
+  }
+
+  .delete {
+    font-size: 10px;
+  }
+
+  .subtitles {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #plantFavorites h1 {
+    font-size: 25px;
+  }
+
+  .favgrid-item,
+  .favgrid-sizer {
+    width: 98%;
+  }
+
+  .fav {
+    top: 10px;
+    right: 10px;
+  }
+
+  #file {
+    font-size: 8px;
+  }
+}
+
+/* tablets */
+/* from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #edit-profile {
+    padding: 0;
+  }
+
+  #header2 {
+    font-size: 20px;
+  }
+
+  .input-name {
+    font-size: 18px;
+  }
+
+  .user-likes {
+    width: 100%;
+  }
+
+  label.input-name {
+    font-size: 15px;
+  }
+
+  .delete {
+    font-size: 10px;
+  }
+
+  .subtitles {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #plantFavorites h1 {
+    font-size: 45px;
+  }
+
+  .favgrid-item,
+  .favgrid-sizer {
+    width: 49%;
+  }
+
+  .fav {
+    top: 10px;
+    right: 10px;
+  }
+
+  #file {
+    font-size: 8px;
+  }
+}
+
+/* small to medium desktop */
+/* from 1024ox to 1440px */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  aside {
+    padding-left: 20px;
+  }
+
+  #edit-profile {
+    padding: 0;
+  }
+
+  #header2 {
+    font-size: 30px;
+  }
+
+  .input-name {
+    font-size: 20px;
+  }
+
+  .delete {
+    font-size: 15px;
+    width: 80%;
+  }
+
+  .subtitles {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #plantFavorites h1 {
+    font-size: 45px;
+  }
+
+  .favgrid-item,
+  .favgrid-sizer {
+    width: 49%;
+  }
+
+  .fav {
+    top: 10px;
+    right: 10px;
+  }
+
+  #file {
+    font-size: 8px;
+  }
+}
+
+/* medium to big desketop */
+/* above 1440px */
+@media screen and (min-width: 1441px) {
+}

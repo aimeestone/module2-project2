@@ -4,7 +4,9 @@
     <div id="edit-profile">
 
       <div id="img-title">
-        <img src="{{ user.avatar }}" class="user-avatar">
+        <div class="avatarContainer">
+          <img src="{{ user.avatar }}" class="user-avatar">
+        </div>
         <h2 id="header2">Edit your profile</h2>
       </div>
 
@@ -15,25 +17,25 @@
       <form class="edit-item" action="/profile/edit/{{user._id}}/name" method="POST">
         <label class="input-name" for="name">Username: </label><br>
         <input class="type-in" type="text" name="name" value="{{user.name}}">
-        <button class="edit-btn">Edit</button>
+        <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
       </form>
       <form class="edit-item" action="/profile/edit/{{user._id}}/email" method="POST" </form> <label class="input-name"
-        for="email">email:
+        for="email">Email:
         </label><br>
         <input class="type-in" type="text" name="email" value="{{user.email}}">
-        <button class="edit-btn">Edit</button>
+        <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
       </form>
       <form class="edit-item" action="/profile/edit/{{user._id}}/password" method="POST">
         <label class="input-name" for="password">Password: </label><br>
         <input class="type-in" type="password" name="password" value="{{user.password}}">
-        <button class="edit-btn">Edit</button>
+        <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
       </form>
       <form class="edit-item" action="/profile/edit/{{user._id}}/avatar" method="POST" enctype="multipart/form-data">
         <label class="input-name" for="avatar">Profile picture: </label><br>
-        <input type="file" name="avatar" value="{{user.avatar}}">
-        <button class="edit-btn">Edit</button>
+        <input id="file" class="type-in" type="file" name="avatar" value="{{user.avatar}}">
+        <button class="edit-btn"><i class="fas fa-pencil-alt"></i></button>
       </form>
-      <form class="edit-item" action="/profile/{{user._id}}/delete" method="post">
+      <form id="delete" class="edit-item" action="/profile/{{user._id}}/delete" method="post">
         <label class="input-name" for="">Delete your account?</label><br>
         <button class="delete">Delete my account</button>
       </form>
@@ -45,8 +47,8 @@
 
 
     <div id="plantFavorites">
-      <h1 class="user-profile-title">Hi {{ user.name }}, nice to have you back!</h1>
-      <h2 class="subtitles">Here are your favorite plants:</h2>
+      <h1 class="user-profile-title">Hi <span class="uppercase">{{ user.name }}</span>, nice to have you back!</h1>
+      <h2 class="subtitles">Here are your favorite plants</h2>
       <div id="gridProfile">
         <div class="favgrid-sizer"></div>
         <div class="favgutter-sizer"></div>

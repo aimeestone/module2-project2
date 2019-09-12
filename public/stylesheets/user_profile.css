@@ -1,36 +1,41 @@
 /* User's profile */
 
 .content-profile {
-  /* background-image: url("../images/profile.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; */
-  /* height: 150vh; */
   display: flex;
+  width: 100vw;
 }
 
 .user-profile-title {
   text-align: start;
   justify-content: flex-start;
   font-size: 40px;
-  color: #7db094;
-  /* text-shadow: 3px 5px 2px #1b423a; */
+  color: #1b423a;
   margin: 0 0 0 30px;
+}
+
+.uppercase {
+  text-transform: capitalize;
 }
 
 aside {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  /* height: 100vh; */
+  width: 25%;
   min-height: 100vh;
-  padding: 100px 0 100px 40px;
   background-color: #7db094;
   color: white;
   box-shadow: 5px 0px 6px -4px rgba(125, 176, 164, 0.6);
 }
 
+#edit-profile {
+  width: 100%;
+  margin-top: 70px;
+  padding: 20px;
+}
+
 .input-name {
   font-size: 20px;
+  font-weight: lighter;
 }
 
 #img-title {
@@ -40,7 +45,6 @@ aside {
 }
 
 #header2 {
-  /* justify-content: center;*/
   text-align: start;
   color: #f1f0eb;
   padding-top: 20px;
@@ -49,18 +53,30 @@ aside {
 .type-in {
   height: 30px;
   border-radius: 10px;
+  border: none;
+  padding: 5px;
+  background-color: #a8dabe;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  width: 60%;
+}
+
+#file {
+  background-color: #7db094;
+  color: #7db094;
+}
+
+.fas.fa-pencil-alt {
+  color: white;
+  font-size: 15px;
 }
 
 .edit-btn {
-  /* height: 20px;
-  width: 50px; */
-  background-color: #f1f0eb;
-  color: #7db094;
-  font-size: 15px;
+  background-color: #7db094;
   padding: 5px;
-  border-radius: 10px;
   margin-left: 20px;
-  /* margin: 20px 0 40px 0; */
+  border: none;
 }
 
 .edit-btn span {
@@ -74,16 +90,20 @@ aside {
 .user-likes {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin-top: 100px;
+  width: 100%;
+  margin-top: 70px;
 }
 
 .user-avatar {
+  width: 100%;
+}
+
+.avatarContainer {
   border-radius: 50%;
   justify-content: center;
   width: 150px;
-  height: auto;
-  /* margin-left: 20px; */
+  height: 150px;
+  overflow: hidden;
 }
 
 .save-changes {
@@ -97,11 +117,16 @@ aside {
 
 .delete {
   border-radius: 20px;
+  border: none;
   color: white;
   font-size: 15px;
-  background-color: rgb(165, 2, 2);
+  background-color: #b44a22;
   padding: 10px;
   margin: 20px 10px 10px 10px;
+}
+
+#delete {
+  margin-top: 30px;
 }
 
 /* Fav plants*/
@@ -113,7 +138,6 @@ aside {
   align-items: center;
   width: 100%;
   padding-left: 10px;
-  margin-top: 100px;
 }
 
 #plantFavorites h1 {
