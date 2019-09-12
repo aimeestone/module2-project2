@@ -84,3 +84,13 @@ table.greenTable thead th {
 table.greenTable thead th:first-child {
   border-left: none;
 }
+
+/*favorites plants*/
+
+.favplant {
+  width: 30%;
+}
+
+.favplant img {
+  width: 100%;
+}

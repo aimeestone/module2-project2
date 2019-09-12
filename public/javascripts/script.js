@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {});
 var grid = document.getElementById("grid");
 var container = document.getElementById("container");
 
+/*filters*/
+
 const filters = document.getElementById("filter").querySelectorAll("input");
 filters.forEach(filter => {
   filter.onchange = function({ target }) {
@@ -47,8 +49,8 @@ filters.forEach(filter => {
         dbRes.data.forEach(plant => {
           grid.innerHTML += `
           <div class="plant-mini grid-item">
+        <i class="fav fas fa-heart white" data-id="${plant._id}"></i>
           <a class="plantsInfo" href="/plants/${plant._id}"> <div>
-            <span class="fav" data-id="${plant._id}">Heart</span>
             <h4>${plant.name}</h4>
         </div></a>
         <div class="plant-mini-img">
@@ -71,6 +73,8 @@ filters.forEach(filter => {
   };
 });
 
+/*search bar*/
+
 const searchBtn = document.getElementById("searchBtn");
 console.log(searchBtn);
 searchBtn.onclick = () => {
@@ -86,8 +90,8 @@ searchBtn.onclick = () => {
       dbRes.data.forEach(plant => {
         grid.innerHTML += `
         <div class="plant-mini grid-item">
+        <i class="fav fas fa-heart white" data-id="${plant._id}"></i>
         <a class="plantsInfo" href="/plants/${plant._id}"> <div>
-          <span class="fav" data-id="${plant._id}">Heart</span>
           <h4>${plant.name}</h4>
       </div></a>
       <div class="plant-mini-img">
@@ -108,6 +112,8 @@ searchBtn.onclick = () => {
     })
     .catch(err => console.log(err));
 };
+
+/*add to favorites*/
 
 const heart = document.querySelectorAll(".fav");
 

@@ -32,7 +32,10 @@ router.post("/signup", cloudinary.single("avatar"), (req, res) => {
         }
 
         UserModel.create(newUser)
-          .then(response => res.redirect(`/survey/${response._id}`))
+          .then(response => {
+            req.session.currentUser = newUser;
+            res.redirect(`/profile`);
+          })
           .catch(error => console.log(error));
       }
     })

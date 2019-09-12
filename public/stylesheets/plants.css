@@ -162,13 +162,14 @@ aside h3 {
   top: 10px;
   right: 50px;
   z-index: 10;
-}
-
-.fa-heart .white {
   color: white;
 }
 
-.fav.is-active {
+.fas.fa-heart.white {
+  color: white;
+}
+
+.fav.fas.fa-heart.white.is-active {
   color: red;
 }
 

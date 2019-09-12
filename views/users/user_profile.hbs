@@ -11,95 +11,41 @@
   <span>{{msg}}</span>
   {{/if}}
 
-  <form method="post" action="/profile" id="user_test"></form>
-  <table class="info-manage-table greenTable">
-    <thead>
-      <tr class="table-row">
-        <th class="table-head">Your info</th>
-        <th class="table-head">Edit your personal info</th>
-      </tr>
-      <tr>
-        <td>
-          <label for="name">Your name</label>
-        </td>
-        <td>
-          <input id="name" type="name" name="name" required placeholder="{{ user.name }}" value="{{ user.name }}">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="email">Your email</label>
-        </td>
-        <td>
-          <input id="email" type="email" name="email" required placeholder="{{ user.email }}" value="{{ user.email }}">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="password">Choose a new password</label>
-        </td>
-        <td>
-          <input id="password" type="password" placeholder="••••••" required value="{{user.password}}" name="password">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="avatar">Edit your profile picture</label>
-        </td>
-        <td>
-          <input id="avatar" type="file" name="avatar">
-        </td>
-      </tr>
-      <tr>
-        <td>Delete my account</td>
-        <td>
-          <button>Are you sure?</button>
-        </td>
-      </tr>
-    </thead>
+  <form action="/profile/edit/{{user._id}}/name" method="POST">
+    <label for="name">name</label>
+    <input type="text" name="name" value="{{user.name}}">
+    <button>Edit</button>
+  </form>
+  <form action="/profile/edit/{{user._id}}/email" method="POST" </form> <label for="email">email</label>
+    <input type="text" name="email" value="{{user.email}}">
+    <button>Edit</button>
+  </form>
+  <form action="/profile/edit/{{user._id}}/password" method="POST">
+    <label for="password">passwor</label>
+    <input type="password" name="password" value="{{user.password}}">
+    <button>Edit</button>
+  </form>
+  <form action="/profile/edit/{{user._id}}/avatar" method="POST" enctype="multipart/form-data">
+    <label for="avatar">avatar</label>
+    <input type="file" name="avatar" value="{{user.avatar}}">
+    <button>Edit</button>
+  </form>
 
-    <tbody>
-      {{#each users}}
-      <tr class="table-row">
-        {{ user.name }}
-      </tr>
-      <tr>
-        {{ user.email }}
-      </tr>
-      <tr>
-        {{ user.password }}
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
-</div>
-
-<button>Save my changes</button>
-</form>
+  <form action="/profile/{{user._id}}/delete" method="post">
+    <label for="">Delete your account</label>
+    <button>Delete</button>
+  </form>
 
 
-{{!-- ----------------------- --}}
+  <div class="user-likes">
+    <h2>Your favorite plants</h2>
+    {{#each user.favorite_plants}}
+    <div>
+      <h2>{{this.name }}</h2>
+      <div class="favplant">
+        <img src="{{this.avatar}}" alt="{{this.name}}">
+      </div>
+    </div>
+    {{/each}}
 
-
-<div class="user-likes">
-  <h2>Your favorite plants</h2>
-
-  <h3>Flowering plants</h3>
-
-  <h3>Green plants</h3>
-
-  <div>
-    <h2>{{ plant.name }}</h2>
-    <p>Description:<br>{{ plant.description }}</p>
-    <p>
-      How to take good care of it:<br> {{ plant.advice }}
-    </p>
-    <ul>Best environment to grow in:
-      <li>Lighting: {{ plant.environment.lighting }}</li>
-      <li>Humidity: {{ plant.environment.humidity }}</li>
-      <li>Pet friendliness: {{ plant.environment.animals }}</li>
-      <li>Type of plant: {{ plant.environment.type_of_plant }}</li>
-    </ul>
   </div>
-
-</div>

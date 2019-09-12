@@ -1,89 +1,101 @@
 const express = require("express");
-const router = new express.Router();
+const router = express.Router();
 const infoUser = require("../models/User");
 const uploader = require("./../config/cloudinary");
+const bcrypt = require("bcrypt");
 
-// Changing the user details in the user profile:
+// redirect to profile with msg
 
-function profile(message) {
-  infoUser.findOne({ email: req.session.currentUser.email }).then(answer => {
-    res.render("user_profile", { user: answer, msg: message }).catch(errors => {
+function profile(res, req, message) {
+  infoUser
+    .findOne({ _id: req })
+    .then(answer => {
+      console.log("answer", answer);
+      res.render("users/user_profile", { user: answer, msg: message });
+    })
+    .catch(errors => {
       console.log(errors);
     });
-  });
 }
 
 router.get("/profile", (req, res) => {
   infoUser
     .findOne({ email: req.session.currentUser.email })
+    .populate("favorite_plants")
     .then(dbRes => {
-      res.render("user_profile", { user: dbRes });
+      res.render("users/user_profile", {
+        user: dbRes
+      });
     })
     .catch(error => {
       console.log(error);
     });
 });
 
-router.post("/profile", uploader.single("avatar"), (req, res, next) => {
+/*edit profile*/
+
+router.post("/profile/edit/:id/name", (req, res) => {
   const name = req.body.name;
-  const email = req.body.email;
-  const password = req.body.password;
-  const avatar = req.body.avatar;
-
-  const newInfoUser = {
-    name,
-    email,
-    password,
-    avatar
-  };
-
-  console.log(newInfoUser);
-
-  if (req.file) {
-    newInfoUser.avatar = req.file.secure_url;
-  }
-
-  const salt = bcrypt.genSaltSync(10);
-  const hashed = bcrypt.hashSync(newInfoUser.password, salt);
-  newInfoUser.password = hashed;
-
   infoUser
-    .find({ email: newInfoUser.email })
-    .then(response => {
-      if (response && response !== req.session.currentUser.email) {
-        profile("This email is already registered, sorry!");
-      } else {
-        infoUser
-          .findOneAndUpdate(
-            { email: req.session.currentUser.email },
-            newInfoUser
-          ) // checker si la nouvelle info ppale existe déjà en BDD
-          .then(res => {
-            res.redirect("/profile");
-          })
-          .catch(error => {
-            console.log(error);
-          });
-      }
-    })
-    .catch();
+    .findByIdAndUpdate(req.params.id, { name: name })
+    .then(dbRes => res.redirect("/profile"))
+    .catch(err => console.log(err));
 });
 
-//   })
+router.post("/profile/edit/:id/email", (req, res) => {
+  const email = req.body.email;
+  infoUser
+    .findOne({ email: email })
+    .then(dbRes => {
+      if (!dbRes) {
+        infoUser
+          .findByIdAndUpdate(req.params.id, { email: email })
+          .then(dbRes => {
+            req.session.currentUser.email = email;
+            res.redirect("/profile");
+          })
+          .catch(err => console.log(err));
+      } else {
+        profile(res, req.params.id, "this email is already used");
+      }
+    })
+    .catch(err => console.log(err));
+});
 
-// .then(dbRes => {
-//   if (dbRes) {
-//     res.render("users/user_profile", {
-//       errorMessage: "This user is already registered, sorry!"
-//     });
-//     return;
-// }
-// else {
-//   res.redirect("/profile")
-//   const salt = bcrypt.genSaltSync(10);
-//   const hashed = bcrypt.hashSync(newInfoUser.password, salt);
-//   newInfoUser.password = hashed;
+router.post("/profile/edit/:id/password", (req, res) => {
+  var password = req.body.password;
+  const salt = bcrypt.genSaltSync(10);
+  const hashed = bcrypt.hashSync(password, salt);
+  password = hashed;
+  infoUser
+    .findByIdAndUpdate(req.params.id, { password: password })
+    .then(dbRes => {
+      req.session.currentUser.password = password;
+      res.redirect("/profile");
+    })
+    .catch(err => console.log(err));
+});
 
-//   if (req.file) { newInfoUser.avatar = req.file.secure_url; }
+router.post(
+  "/profile/edit/:id/avatar",
+  uploader.single("avatar"),
+  (req, res) => {
+    if (req.file) {
+      var avatar = req.file.secure_url;
+    }
+    infoUser
+      .findByIdAndUpdate(req.params.id, { avatar: avatar })
+      .then(dbRes => res.redirect("/profile"))
+      .catch(err => console.log(err));
+  }
+);
+
+/*delete account*/
+router.post("/profile/:id/delete", (req, res) => {
+  infoUser
+    .findByIdAndDelete(req.params.id)
+    .then(dbRes => res.redirect("/"))
+    .catch(err => console.log(err));
+});
 
 module.exports = router;
