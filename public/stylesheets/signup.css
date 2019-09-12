@@ -20,7 +20,7 @@
 
 .title_signup {
   text-align: center;
-  font-size: 80px;
+  font-size: 75px;
   color: #1b423a;
   margin: 0;
   width: 100%;
@@ -67,7 +67,7 @@
 .input_signup {
   border-radius: 20px;
   border: none;
-  padding: 20px;
+  padding: 15px;
   font-size: 20px;
   background-color: #1b423a;
   color: white;
