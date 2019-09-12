@@ -3,15 +3,17 @@
   <div id="first-column">
     <h1 class="title">The {{ plant.name }}</h1>
 
-    <div class="onePlantImg">
-      <img src="{{plant.avatar}}" alt="{{plant.name}}">
+    {{!-- <div class="onePlantImg"> --}}
+    <div class="plant-avatar">
+      <img class="plant-avatar" src="{{plant.avatar}}" alt="{{plant.name}}">
     </div>
 
   </div>
 
   <div id="second-column">
     <div class="plant-box">
-      <p class="subtitles">{{ plant.outside }} {{ plant.environment.type_of_plant }}</p>
+      <p class="subtitles"><span class="capital-letter">{{ plant.environment.outside }}</span>
+        {{ plant.environment.type_of_plant }}</p>
       <p>{{ plant.descriptif }}</p>
       <p class="subtitles">
         How do I take good care of it?<br>

@@ -1,2 +1,72 @@
 <div class="content-profile">
 
+
+  <aside>
+    <div id="edit-profile">
+
+      <div id="img-title">
+        <img src="{{ user.avatar }}" class="user-avatar">
+        <h2 id="header2">Edit your profile</h2>
+      </div>
+
+      {{#if msg}}
+      <span>{{msg}}</span>
+      {{/if}}
+
+      <form class="edit-item" action="/profile/edit/{{user._id}}/name" method="POST">
+        <label class="input-name" for="name">Username: </label><br>
+        <input class="type-in" type="text" name="name" value="{{user.name}}">
+        <button class="edit-btn">Edit</button>
+      </form>
+      <form class="edit-item" action="/profile/edit/{{user._id}}/email" method="POST" </form> <label class="input-name"
+        for="email">email:
+        </label><br>
+        <input class="type-in" type="text" name="email" value="{{user.email}}">
+        <button class="edit-btn">Edit</button>
+      </form>
+      <form class="edit-item" action="/profile/edit/{{user._id}}/password" method="POST">
+        <label class="input-name" for="password">Password: </label><br>
+        <input class="type-in" type="password" name="password" value="{{user.password}}">
+        <button class="edit-btn">Edit</button>
+      </form>
+      <form class="edit-item" action="/profile/edit/{{user._id}}/avatar" method="POST" enctype="multipart/form-data">
+        <label class="input-name" for="avatar">Profile picture: </label><br>
+        <input type="file" name="avatar" value="{{user.avatar}}">
+        <button class="edit-btn">Edit</button>
+      </form>
+      <form class="edit-item" action="/profile/{{user._id}}/delete" method="post">
+        <label class="input-name" for="">Delete your account?</label><br>
+        <button class="delete">Delete my account</button>
+      </form>
+
+    </div>
+  </aside>
+
+  <div class="user-likes">
+
+
+    <div id="plantFavorites">
+      <h1 class="user-profile-title">Hi {{ user.name }}, nice to have you back!</h1>
+      <h2 class="subtitles">Here are your favorite plants:</h2>
+      <div id="gridProfile">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+
+        {{#each user.favorite_plants}}
+        <div class="plant-mini grid-item">
+          {{!-- <i class="fav fas fa-heart white" data-id="{{this._id}}"></i> --}}
+          <a class="plantsInfo" href="/plants/{{this._id}}">
+            <div>
+              <h4>{{this.name}}</h4>
+            </div>
+          </a>
+          <div class="plant-mini-img">
+            <img src="{{this.avatar}}" alt="plant-img">
+          </div>
+        </div>
+        {{/each}}
+
+      </div>
+    </div>
+
+  </div>
