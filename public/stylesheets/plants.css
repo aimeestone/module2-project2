@@ -25,7 +25,9 @@
 }
 
 #asideplants h3 {
-  font-size: 40px;
+  font-size: 25px;
+  text-align: left;
+  margin-top: 20px;
 }
 
 #searchbar {
@@ -76,6 +78,7 @@
 #filter h4 {
   margin: 0;
   font-weight: lighter;
+  font-size: 40px;
 }
 
 .filterCategory,
@@ -115,6 +118,8 @@
 #grid {
   width: 100%;
   clear: both;
+  margin: 0;
+  padding: 0;
 }
 
 .grid-sizer {

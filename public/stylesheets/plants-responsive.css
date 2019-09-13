@@ -2,7 +2,7 @@
 /* from 413px */
 @media screen and (max-width: 413px) {
   #asideplants {
-    width: 30%;
+    width: 40%;
   }
 
   #searchbar input {
@@ -13,7 +13,8 @@
     font-size: 12px;
   }
 
-  #filter h4 {
+  #filter h4,
+  #filter h3 {
     font-size: 14px;
   }
 
@@ -27,7 +28,7 @@
   }
 
   #allPlants {
-    width: 70%;
+    width: 60%;
   }
 
   #allPlants h1 {
@@ -39,7 +40,7 @@
 /* from 415px to 767px */
 @media screen and (min-width: 414px) and (max-width: 767px) {
   #asideplants {
-    width: 30%;
+    width: 40%;
   }
 
   #searchbar input {
@@ -50,6 +51,7 @@
     font-size: 15px;
   }
 
+  #filter h3,
   #filter h4 {
     font-size: 18px;
   }
@@ -64,7 +66,7 @@
   }
 
   #allPlants {
-    width: 70%;
+    width: 60%;
   }
 
   #allPlants h1 {
@@ -121,11 +123,7 @@
   }
 
   .filterLabel {
-    font-size: 25px;
-  }
-
-  #filter h4 {
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .title {

@@ -5,12 +5,23 @@
   width: 100vw;
 }
 
+#plantFavorites {
+  padding-left: 10px;
+}
+
 .user-profile-title {
-  text-align: start;
-  justify-content: flex-start;
-  font-size: 40px;
+  font-size: 60px;
   color: #1b423a;
-  margin: 0 0 0 30px;
+  text-align: center;
+  width: 100%;
+  font-size: 70px;
+}
+
+#plantFavorites h2 {
+  font-size: 50px;
+  color: #7db094;
+  text-align: center;
+  width: 100%;
 }
 
 .uppercase {
@@ -128,32 +139,6 @@
 
 #delete {
   margin-top: 30px;
-}
-
-/* Fav plants*/
-
-/* #plantFavorites {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  padding-left: 10px;
-}
-
-#plantFavorites h1 {
-  width: 100%;
-  font-size: 50px;
-  margin: 20px 0;
-  text-align: center;
-}
-
-.favplant-mini {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 /*Masonery grid*/

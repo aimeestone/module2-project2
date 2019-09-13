@@ -29,7 +29,7 @@ const plants = [
     environment: {
       outside: ["indoor"],
       lighting: ["direct"],
-      humidity: ["normal", "quite"],
+      humidity: ["normal", "dry"],
       animals: ["pet friendly"],
       type_of_plant: ["green plant"]
     },
