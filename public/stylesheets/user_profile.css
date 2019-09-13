@@ -21,6 +21,7 @@ aside {
   display: flex;
   flex-direction: column;
   width: 25%;
+
   min-height: 100vh;
   background-color: #7db094;
   color: white;
@@ -131,7 +132,7 @@ aside {
 
 /* Fav plants*/
 
-#plantFavorites {
+/* #plantFavorites {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
