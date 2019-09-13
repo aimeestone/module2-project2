@@ -1,8 +1,10 @@
 /* phones */
 /* from 413px */
 @media screen and (max-width: 413px) {
-  aside {
+  #asideprofile {
     width: 40%;
+    padding-left: 10px;
+    padding-top: 20px;
   }
 
   .type-in {
@@ -49,7 +51,7 @@
 
   .favgrid-item,
   .favgrid-sizer {
-    width: 90%;
+    width: 98%;
   }
 
   .fav {
@@ -69,8 +71,10 @@
 /* big phones / small tablet */
 /* from 415px to 767px */
 @media screen and (min-width: 414px) and (max-width: 767px) {
-  aside {
-    width: 30%;
+  #asideprofile {
+    width: 40%;
+    padding-left: 15px;
+    padding-top: 20px;
   }
 
   .avatarContainer {
@@ -125,6 +129,11 @@
 /* tablets */
 /* from 768px to 1024px */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+  #asideprofile {
+    padding-left: 20px;
+    padding-top: 30px;
+  }
+
   #edit-profile {
     padding: 0;
   }
@@ -139,10 +148,6 @@
 
   .user-likes {
     width: 100%;
-  }
-
-  label.input-name {
-    font-size: 15px;
   }
 
   .delete {
@@ -164,6 +169,10 @@
     width: 49%;
   }
 
+  .fas.fa-heart.white {
+    font-size: 30px;
+  }
+
   .fav {
     top: 10px;
     right: 10px;
@@ -177,8 +186,9 @@
 /* small to medium desktop */
 /* from 1024ox to 1440px */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-  aside {
+  #asideprofile {
     padding-left: 20px;
+    padding-top: 30px;
   }
 
   #edit-profile {
@@ -193,24 +203,34 @@
     font-size: 20px;
   }
 
+  .type-in {
+    font-size: 15px;
+    width: 70%;
+    padding: 10px;
+  }
+
   .delete {
     font-size: 15px;
     width: 80%;
   }
 
   .subtitles {
-    font-size: 30px;
+    font-size: 40px;
     width: 100%;
     text-align: center;
   }
 
   #plantFavorites h1 {
-    font-size: 45px;
+    font-size: 60px;
   }
 
   .favgrid-item,
   .favgrid-sizer {
     width: 49%;
+  }
+
+  .fas.fa-heart.white {
+    font-size: 30px;
   }
 
   .fav {
@@ -226,4 +246,50 @@
 /* medium to big desketop */
 /* above 1440px */
 @media screen and (min-width: 1441px) {
+  #asideprofile {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  #header2 {
+    font-size: 40px;
+  }
+
+  .avatarContainer {
+    width: 200px;
+    height: 200px;
+  }
+
+  .input-name {
+    font-size: 30px;
+  }
+
+  .type-in {
+    font-size: 20px;
+    width: 80%;
+    padding: 10px;
+  }
+
+  .delete {
+    font-size: 20px;
+    width: 80%;
+  }
+
+  #plantFavorites h1 {
+    font-size: 80px;
+  }
+
+  .fas.fa-heart.white {
+    font-size: 40px;
+  }
+
+  .fav {
+    top: 10px;
+    right: 10px;
+  }
+
+  .subtitles {
+    font-size: 50px;
+    width: 100%;
+    text-align: center;
+  }
 }
