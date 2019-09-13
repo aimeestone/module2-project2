@@ -14,8 +14,8 @@
 }
 
 /*plants filter*/
-aside {
-  width: 20%;
+#asideplants {
+  width: 30%;
   min-height: 100vh;
   padding-left: 10px;
   padding-top: 10px;
@@ -24,7 +24,7 @@ aside {
   box-shadow: 5px 0px 6px -4px rgba(125, 176, 164, 0.6);
 }
 
-aside h3 {
+#asideplants h3 {
   font-size: 40px;
 }
 

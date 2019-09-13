@@ -17,7 +17,7 @@
   text-transform: capitalize;
 }
 
-aside {
+#asideprofile {
   display: flex;
   flex-direction: column;
   width: 25%;

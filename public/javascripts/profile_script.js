@@ -43,11 +43,9 @@ function favoritesPlant(target) {
       favarr.push(heart.dataset.id);
     }
   });
-  console.log(favarr);
   axios
     .post("/plants/fav/delete", { hearts: favarr })
     .then(dbRes => {
-      console.log("dbRes", dbRes);
       saveFavPlants();
       grid.innerHTML = "";
       grid.innerHTML = `<div class="favgrid-sizer"></div>
