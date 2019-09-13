@@ -1,6 +1,6 @@
 <div class="content-profile">
 
-  <aside>
+  <aside id="asideprofile">
     <div id="edit-profile">
 
       <div id="img-title">
@@ -48,7 +48,7 @@
 
     <div id="plantFavorites">
       <h1 class="user-profile-title">Hi <span class="uppercase">{{ user.name }}</span>, nice to have you back!</h1>
-      <h2 class="subtitles">Here are your favorite plants</h2>
+      <h2>Here are your favorite plants</h2>
       <div id="gridProfile">
         <div class="favgrid-sizer"></div>
         <div class="favgutter-sizer"></div>
@@ -56,7 +56,7 @@
         {{#each user.favorite_plants}}
         <div class="favplant-mini favgrid-item">
           <i class="fav fas fa-heart white" data-id="{{this._id}}"></i>
-          <a class="plantsInfo" href="/plants/{{this._id}}">
+          <a class="favplantsInfo" href="/plants/{{this._id}}">
             <div>
               <span>{{this.name}}</span>
             </div>

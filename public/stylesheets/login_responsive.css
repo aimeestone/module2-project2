@@ -123,9 +123,135 @@
   
   .errormessage {
     width: 100%;
-    text-align: center;
-    color: #b44a22;
     margin: 0;
+    font-size: 20px;
+}
+}
+
+/* tablets */
+/* from 768px to 1024px */ 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #content_login {
+    height: 100vh;
+  }
+  
+  #login {
+    margin-top: 100px;
+    border-radius: 20px;
+    padding: 20px;
+    height: 610px;
+    width: 80vw;
+  }
+  
+  #form {
+    font-size: 25px;
+    width: 100%;
+  }
+  
+  .form {
+    margin: 0;
+  }
+  
+  .button {
+    font-size: 25px;
+    padding: 7px 80px;
+    border-radius: 17px;
+    margin-top: 25px;
+  }
+  
+  .password {
+    margin: 20px 0;
+  }
+
+  .email{
+    margin: 15px 0;
+  }
+  
+  #form p {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .input {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 17px;
+    width: 90%
+  }
+  
+  .welcome {
+    font-size: 25px;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .errormessage {
+    margin: 0;
+    font-size: 20px;
+}
+}
+
+/* small to medium desktop */
+/* from 1024ox to 1440px */ 
+@media screen and (min-width: 1024px) {
+  #content_login {
+    height: 100vh;
+  }
+  
+  #login {
+    margin-top: 100px;
+    border-radius: 20px;
+    padding: 20px;
+    height: 570px;
+    width: 50vw;
+  }
+  
+  #form {
+    font-size: 25px;
+    width: 100%;
+  }
+  
+  .form {
+    margin: 0;
+  }
+  
+  .button {
+    font-size: 25px;
+    padding: 7px 80px;
+    border-radius: 17px;
+    margin-top: 25px;
+  }
+  
+  .password {
+    margin: 20px 0;
+  }
+
+  .email{
+    margin: 15px 0;
+  }
+  
+  #form p {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .input {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 17px;
+    width: 90%
+  }
+  
+  .welcome {
+    font-size: 30px;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .errormessage {
+    margin-top: 15px;
     font-size: 20px;
 }
 }

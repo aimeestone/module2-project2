@@ -5,22 +5,41 @@
   width: 100vw;
 }
 
+#plantFavorites {
+  padding-left: 10px;
+}
+
 .user-profile-title {
-  text-align: start;
-  justify-content: flex-start;
-  font-size: 40px;
+  font-size: 60px;
   color: #1b423a;
-  margin: 0 0 0 30px;
+  text-align: center;
+  width: 100%;
+  font-size: 70px;
+}
+
+#plantFavorites h2 {
+  font-size: 50px;
+  color: #7db094;
+  text-align: center;
+  width: 100%;
 }
 
 .uppercase {
   text-transform: capitalize;
 }
 
+<<<<<<< HEAD
 aside {
   display: flex;
   flex-direction: column;
   width: 25%;
+=======
+#asideprofile {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+
+>>>>>>> c719ebaa46a5a1060237fe0913a4439108423d61
   min-height: 100vh;
   background-color: #7db094;
   color: white;
@@ -129,6 +148,7 @@ aside {
   margin-top: 30px;
 }
 
+<<<<<<< HEAD
 /* Fav plants*/
 
 /* #plantFavorites {
@@ -155,6 +175,8 @@ aside {
   align-items: center;
 }
 
+=======
+>>>>>>> c719ebaa46a5a1060237fe0913a4439108423d61
 /*Masonery grid*/
 
 #gridProfile {
@@ -171,6 +193,10 @@ aside {
 }
 .favgutter-sizer {
   width: 4px;
+}
+
+.favplant-mini {
+  position: relative;
 }
 
 .favplant-mini-img {
@@ -201,6 +227,10 @@ aside {
   color: rgba(35, 48, 28, 1);
   background-color: rgba(255, 255, 255, 0.6);
   transition: background-color linear 0.5s;
+}
+
+.favplantsInfo span {
+  font-size: 30px;
 }
 
 .fav {

@@ -1,19 +1,157 @@
 /* phones */
 /* from 413px */
 @media screen and (max-width: 413px) {
+  #asideplants {
+    width: 40%;
+  }
+
+  #searchbar input {
+    width: 70%;
+  }
+
+  .filterLabel {
+    font-size: 12px;
+  }
+
+  #filter h4,
+  #filter h3 {
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .grid-item,
+  .grid-sizer {
+    width: 98%;
+  }
+
+  #allPlants {
+    width: 60%;
+  }
+
+  #allPlants h1 {
+    font-size: 20px;
+  }
 }
 
 /* big phones / small tablet */
 /* from 415px to 767px */
 @media screen and (min-width: 414px) and (max-width: 767px) {
+  #asideplants {
+    width: 40%;
+  }
+
+  #searchbar input {
+    width: 75%;
+  }
+
+  .filterLabel {
+    font-size: 15px;
+  }
+
+  #filter h3,
+  #filter h4 {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .grid-item,
+  .grid-sizer {
+    width: 98%;
+  }
+
+  #allPlants {
+    width: 60%;
+  }
+
+  #allPlants h1 {
+    font-size: 25px;
+  }
+}
+
+/* tablets */
+/* from 768px to 1024px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #asideplants {
+    width: 30%;
+  }
+
+  #searchbar input {
+    width: 80%;
+  }
+
+  .filterLabel {
+    font-size: 20px;
+  }
+
+  #filter h4 {
+    font-size: 25px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .grid-item,
+  .grid-sizer {
+    width: 49%;
+  }
+
+  #allPlants {
+    width: 70%;
+  }
+
+  #allPlants h1 {
+    font-size: 35px;
+  }
 }
 
 /* small to medium desktop */
 /* from 1024ox to 1440px */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
+  #asideplants {
+    width: 30%;
+  }
+
+  #searchbar input {
+    width: 80%;
+  }
+
+  .filterLabel {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .grid-item,
+  .grid-sizer {
+    width: 33%;
+  }
+
+  #allPlants {
+    width: 70%;
+  }
+
+  #allPlants h1 {
+    font-size: 50px;
+  }
 }
 
 /* medium to big desketop */
 /* above 1440px */
 @media screen and (min-width: 1441px) {
+  #filter h4 {
+    font-size: 30px;
+  }
+
+  .filterLabel {
+    font-size: 20px;
+  }
 }
