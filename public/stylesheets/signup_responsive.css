@@ -1,0 +1,104 @@
+/*HOME*/
+
+/* phones */
+/* from 413px */ 
+@media screen and (max-width: 413px) {
+  #signup {
+    height: 480px;
+    width:80%;
+    margin-top: 80px;
+    padding: 10px;
+  }
+  
+  .title_signup {
+    font-size: 30px;
+  }
+  
+  #form {
+    font-size: 17px;
+  }
+  
+  .button_signup {
+    font-size: 15px;
+    padding: 7px;
+    margin-top: 25px;
+  }
+  
+  .label {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+  
+  .input_signup {
+    border-radius: 10px;
+    padding: 7px;
+    font-size: 13px;
+    width: 80%;
+  }
+  
+  .errormessage {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* big phones / small tablet */
+/* from 415px to 767px */ 
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  #signup {
+    height: 620px;
+    width:80%;
+    margin-top: 90px;
+    padding: 10px;
+  }
+  
+  .title_signup {
+    font-size: 45px;
+  }
+  
+  #form {
+    font-size: 25px;
+  }
+  
+  .button_signup {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 25px;
+  }
+  
+  .label {
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  
+  .input_signup {
+    border-radius: 15px;
+    padding: 7px;
+    font-size: 17px;
+    width: 80%;
+  }
+  
+  .errormessage {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+
+/* tablets */
+/* from 768px to 1024px */ 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* small to medium desktop */
+/* from 1024ox to 1440px */ 
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+}
+
+/* medium to big desketop */ 
+/* above 1440px */ 
+@media screen and (min-width: 1441px) {
+
+}

@@ -1,0 +1,19 @@
+/* phones */
+/* from 413px */
+@media screen and (max-width: 413px) {
+}
+
+/* big phones / small tablet */
+/* from 415px to 767px */
+@media screen and (min-width: 414px) and (max-width: 767px) {
+}
+
+/* small to medium desktop */
+/* from 1024ox to 1440px */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+}
+
+/* medium to big desketop */
+/* above 1440px */
+@media screen and (min-width: 1441px) {
+}

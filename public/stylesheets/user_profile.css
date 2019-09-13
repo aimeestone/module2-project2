@@ -1,9 +1,8 @@
 /* User's profile */
 
 .content-profile {
-  height: 150vh;
   display: flex;
-  justify-content: center;
+  width: 100vw;
 }
 
 .user-profile-title {
@@ -14,20 +13,30 @@
   margin: 0 0 0 30px;
 }
 
+.uppercase {
+  text-transform: capitalize;
+}
+
 aside {
   display: flex;
   flex-direction: column;
   width: 25%;
-  /* height: 100vh; */
-  height: 100%;
-  padding: 100px 0 100px 40px;
+
+  min-height: 100vh;
   background-color: #7db094;
   color: white;
   box-shadow: 5px 0px 6px -4px rgba(125, 176, 164, 0.6);
 }
 
+#edit-profile {
+  width: 100%;
+  margin-top: 70px;
+  padding: 20px;
+}
+
 .input-name {
   font-size: 20px;
+  font-weight: lighter;
 }
 
 #img-title {
@@ -45,15 +54,30 @@ aside {
 .type-in {
   height: 30px;
   border-radius: 10px;
+  border: none;
+  padding: 5px;
+  background-color: #a8dabe;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  width: 60%;
+}
+
+#file {
+  background-color: #7db094;
+  color: #7db094;
+}
+
+.fas.fa-pencil-alt {
+  color: white;
+  font-size: 15px;
 }
 
 .edit-btn {
-  background-color: #f1f0eb;
-  color: #7db094;
-  font-size: 15px;
+  background-color: #7db094;
   padding: 5px;
-  border-radius: 10px;
   margin-left: 20px;
+  border: none;
 }
 
 .edit-btn span {
@@ -67,16 +91,20 @@ aside {
 .user-likes {
   display: flex;
   flex-direction: column;
-  width: 70%;
-  margin-bottom: 40px;
-  margin-top: 100px;
+  width: 100%;
+  margin-top: 70px;
 }
 
 .user-avatar {
+  width: 100%;
+}
+
+.avatarContainer {
   border-radius: 50%;
   justify-content: center;
   width: 150px;
-  height: auto;
+  height: 150px;
+  overflow: hidden;
 }
 
 .save-changes {
@@ -90,80 +118,19 @@ aside {
 
 .delete {
   border-radius: 20px;
+  border: none;
   color: white;
   font-size: 15px;
-  background-color: rgb(165, 2, 2);
+  background-color: #b44a22;
   padding: 10px;
   margin: 20px 10px 10px 10px;
 }
 
-.subtitles {
-  font-size: 30px;
-  color: #7db094;
+#delete {
+  margin-top: 30px;
 }
 
-/* table to edit the user info */
-/* table.greenTable {
-  background-color: white;
-  width: 30%;
-  text-align: center;
-}
-
-th {
-  background-color: #7db094;
-}
-table.greenTable td,
-table.greenTable th {
-  padding: 3px 2px;
-}
-table.greenTable thead {
-  background: white;
-  height: auto;
-  border: none;
-  box-shadow: 0px 0px 10px 2px rgba(58, 58, 58, 0.4);
-  border-radius: 10px;
-  padding: 30px;
-  border-bottom: 0px solid #444444;
-}
-table.greenTable thead th {
-  font-size: 19px;
-  font-weight: bold;
-  color: #f0f0f0;
-  text-align: left;
-  border-left: 2px solid #80cc84;
-}
-table.greenTable thead th:first-child {
-  border-left: none;
-} */
-
-/*favorites plants*/
-/* /* 
-.favplant {
-  width: 30%;
-}
-
-.favplant img {
-  width: 100%;
-}
-
-/* ALL PLANTS CLASSES & IDS */
-
-/* * {
-  box-sizing: border-box;
-}
-
-/* All plants*/
-/* #plantsContainer {
-  display: flex;
-  flex-direction: row;
-  margin-top: 70px;
-}
-
-#plantsContainer li {
-  list-style-type: none;
-} */
-
-/*plants catalog*/
+/* Fav plants*/
 
 /* #plantFavorites {
   display: flex;
@@ -181,15 +148,13 @@ table.greenTable thead th:first-child {
   text-align: center;
 }
 
-.plant-mini {
+.favplant-mini {
   position: relative;
-  width: 33%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2px;
-}  */
+}
 
 /*Masonery grid*/
 
@@ -198,28 +163,28 @@ table.greenTable thead th:first-child {
   clear: both;
 }
 
-.grid-sizer {
+.favgrid-sizer {
   width: 33%;
 }
-.grid-item {
+.favgrid-item {
   width: 33%;
   float: left;
 }
-.gutter-sizer {
+.favgutter-sizer {
   width: 4px;
 }
 
-.plant-mini-img {
+.favplant-mini-img {
   height: 100%;
 }
 
-.plant-mini-img img {
+.favplant-mini-img img {
   width: 100%;
 }
 
 /*hover div*/
 
-.plantsInfo {
+.favplantsInfo {
   position: absolute;
   text-decoration: none;
   color: rgba(35, 48, 28, 0);
@@ -233,7 +198,7 @@ table.greenTable thead th:first-child {
   text-align: center;
 }
 
-.plantsInfo:hover {
+.favplantsInfo:hover {
   color: rgba(35, 48, 28, 1);
   background-color: rgba(255, 255, 255, 0.6);
   transition: background-color linear 0.5s;

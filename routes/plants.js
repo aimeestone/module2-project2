@@ -108,4 +108,30 @@ router.post("/plants/savefav", (req, res) => {
     .catch(error => console.log(err));
 });
 
+router.post("/plants/fav/delete", (req, res) => {
+  let query = [];
+
+  console.log("req.body", req.body.hearts);
+  if (req.body.hearts.length) {
+    console.log("query", query);
+    query = req.body.hearts;
+  }
+  UserModel.findOneAndUpdate(
+    { email: req.session.currentUser.email },
+    { favorite_plants: query }
+  )
+    .then(plants => {
+      {
+        UserModel.findOne({ email: req.session.currentUser.email })
+          .populate("favorite_plants")
+          .then(response => {
+            console.log("plants", response);
+            res.send(response);
+          })
+          .catch(error => console.log(error));
+      }
+    })
+    .catch(err => console.log(err));
+});
+
 module.exports = router;

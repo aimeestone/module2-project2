@@ -30,7 +30,7 @@ function plantMini(plant, grid) {
     <div class="plant-mini grid-item">
   <i class="fav fas fa-heart white" data-id="${plant._id}"></i>
     <a class="plantsInfo" href="/plants/${plant._id}"> <div>
-      <h4>${plant.name}</h4>
+      <span>${plant.name}</span>
   </div></a>
   <div class="plant-mini-img">
    <img src="${plant.avatar}" alt="plant-img">
@@ -40,7 +40,7 @@ function plantMini(plant, grid) {
     grid.innerHTML += `
     <div class="plant-mini grid-item">
     <a class="plantsInfo" href="/plants/${plant._id}"> <div>
-      <h4>${plant.name}</h4>
+      <span>${plant.name}</span>
   </div></a>
   <div class="plant-mini-img">
    <img src="${plant.avatar}" alt="plant-img">
