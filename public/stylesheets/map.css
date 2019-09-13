@@ -15,3 +15,58 @@
   width: auto;
   height: auto;
 }
+
+/*MAP*/
+
+/* phones */
+/* from 413px */ 
+@media screen and (max-width: 413px) {
+  .title_map {
+    margin: 80px 0 18px 0;
+    font-size: 30px;
+  }
+  
+  .title_marker {
+    font-size: 20px;
+  }
+
+  .adresse {
+    font-size: 15px;
+  }
+}
+
+/* big phones / small tablet */
+/* from 415px to 767px */ 
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  .title_map {
+    margin: 95px 0 27px 0;
+    font-size: 40px;
+    padding: 0 10px;
+  }
+  
+  .title_marker {
+    font-size: 20px;
+  }
+
+  .adresse {
+    font-size: 20px;
+  }
+}
+
+/* tablets */
+/* from 768px to 1024px */ 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .title_map {
+    margin: 115px 0 42px 0;
+    font-size: 60px;
+    padding: 0 10px;
+  }
+  
+  .title_marker {
+    font-size: 30px;
+  }
+
+  .adresse {
+    font-size: 25px;
+  }
+}

@@ -142,7 +142,7 @@
 
 
 /* tablets */
-/* from 768px to 1024px */ 
+/* from 768px to 1023px */ 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   header {
     height: 100vh;
@@ -221,7 +221,7 @@
 
 /* small to medium desktop */
 /* from 1024ox to 1440px */ 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+/* @media screen and (min-width: 1024px) and (max-width: 1440px) {
   header {
     height: 60vh;
     width: auto;
@@ -303,7 +303,7 @@
   #section2 h3 {
     margin: 20px 0;
   }
-}
+} */
 
 /* medium to big desketop */ 
 /* above 1440px */ 
