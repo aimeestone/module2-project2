@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  masonery();
   saveFavPlants();
   heart();
 });
@@ -6,18 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
 var grid = document.getElementById("gridProfile");
 
 /* Masonery Grid*/
-var masonery = new Masonry(grid, {
-  itemSelector: ".favgrid-item",
-  columnWidth: ".favgrid-sizer",
-  gutter: ".favgutter-sizer",
-  percentPosition: true,
-  originTop: true
-});
+function masonery() {
+  var masonery = new Masonry(grid, {
+    itemSelector: ".favgrid-item",
+    columnWidth: ".favgrid-sizer",
+    gutter: ".favgutter-sizer",
+    percentPosition: true
+  });
 
-imagesLoaded(grid).on("progress", function() {
-  // layout Masonry after each image loads
-  masonery.layout();
-});
+  imagesLoaded(grid).on("progress", function() {
+    // layout Masonry after each image loads
+    masonery.layout();
+  });
+}
 
 /*delete fav plants*/
 
@@ -29,6 +31,7 @@ function saveFavPlants() {
         document.querySelectorAll(".fav").forEach(heart => {
           if (heart.dataset.id === plant) {
             heart.classList.toggle("is-active");
+            masonery();
           }
         });
       });
@@ -53,7 +56,7 @@ function favoritesPlant(target) {
         <div class="favgutter-sizer"></div>`;
       dbRes.data.favorite_plants.forEach(plant => {
         grid.innerHTML += `
-        <div class="favplant-mini grid-item">
+        <div class="favplant-mini favgrid-item">
       <i class="fav fas fa-heart white" data-id="${plant._id}"></i>
         <a class="favplantsInfo" href="/plants/${plant._id}"> <div>
           <span>${plant.name}</span>
@@ -63,16 +66,7 @@ function favoritesPlant(target) {
       </div>
     </div>`;
         heart();
-        var masonery = new Masonry(grid, {
-          itemSelector: ".favgrid-item",
-          columnWidth: ".favgrid-sizer",
-          gutter: ".favgutter-sizer",
-          percentPosition: true
-        });
-        imagesLoaded(grid).on("progress", function() {
-          // layout Masonry after each image loads
-          masonery.layout();
-        });
+        masonery();
       });
       if (dbRes.length === 0) {
         grid.innerHTML = "";
@@ -85,6 +79,7 @@ function heart() {
   document.querySelectorAll(".fav").forEach(fav => {
     fav.onclick = function({ target }) {
       favoritesPlant(target);
+      masonery();
     };
   });
 }
