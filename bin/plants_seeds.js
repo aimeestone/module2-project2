@@ -182,6 +182,51 @@ const plants = [
       type_of_plant: ["green plant"]
     },
     avatar: "/images/astilbe.jpg"
+  },
+  {
+    name: "Cactus Euphorbia",
+    descriptif:
+      "The genus Euphorbia comprises more than 2000 species, native to temperate and warm regions on all continents. This succulent, cactiform, upright, up to 3 m tall plant with many thick, quadrangular, thorny, green stems. Green-yellow flowers marked with red.",
+    advice:
+      "This plant likes light, without direct sun. Low temperature: 7 ° C. Regular watering, without excess, from March to October. Allow the substrate to dry between two waterings. Water in winter once a month maximum. The ideal is to winter dry this plant in a veranda at a temperature not exceeding 12 ° C. You can leave the plant outside on sunny days, avoiding the hot sun at first.",
+    environment: {
+      outside: ["indoor"],
+      lighting: ["softened"],
+      humidity: ["dry"],
+      animals: ["pet friendly"],
+      type_of_plant: ["green plant"]
+    },
+    avatar: "/images/cactus-euphorbia.jpg"
+  },
+  {
+    name: "Monstera Deliciosa",
+    descriptif:
+      "Monstera Deliciosa is a vigorous vine-like perennial of the family Araceae. It is a fake philodendron, the vernacular name Philodendron being widely used to designate individuals marketed as an ornamental apartment plant. Monstera deliciosa is a fast-growing plant widely used as an ornamental plant in the tropics and subtropics.",
+    advice:
+      "Easy to grow, solid. Does not require full sun but a bright exposure. Ideal for large rooms.",
+    environment: {
+      outside: ["indoor"],
+      lighting: ["softened"],
+      humidity: ["normal"],
+      animals: ["not pet friendly"],
+      type_of_plant: ["green plant"]
+    },
+    avatar: "/images/monstera.jpg"
+  },
+  {
+    name: "Rose bush",
+    descriptif:
+      "Its bushy, regular vegetation is very resistant to diseases. It blooms in big bunches of semi-double flowers pure red ... ideal for massive, border, planter, it is also a flower that holds very well in vase.",
+    advice:
+      "Rich watering at the plantation. The best cutting time is from February to the end of March depending on the region. Avoid periods of heavy frost. Short size for bush rose, tall shrub rose",
+    environment: {
+      outside: ["outdoor"],
+      lighting: ["softened", "direct"],
+      humidity: ["normal"],
+      animals: ["pet friendly"],
+      type_of_plant: ["plant with flowers"]
+    },
+    avatar: "/images/roses.jpg"
   }
 ];
 

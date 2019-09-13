@@ -158,15 +158,20 @@ aside h3 {
   transition: background-color linear 0.5s;
 }
 
+.plantsInfo h4 {
+  font-size: 30px;
+}
+
 .fav {
   position: absolute;
   top: 10px;
-  right: 50px;
+  right: 10px;
   z-index: 10;
   color: white;
 }
 
 .fas.fa-heart.white {
+  font-size: 25px;
   color: white;
 }
 
@@ -184,7 +189,7 @@ aside h3 {
   width: 100%;
 }
 
-.fas.fa-search{
+.fas.fa-search {
   color: #1b423a;
   margin-left: 10px;
 }

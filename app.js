@@ -39,7 +39,7 @@ const app = express();
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
-    cookie: { maxAge: 60000 },
+    cookie: { maxAge: 3600000 },
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
       ttl: 24 * 60 * 60

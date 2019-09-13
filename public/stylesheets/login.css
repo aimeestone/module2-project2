@@ -8,7 +8,7 @@
 }
 
 #login {
-  margin-top : 150px;
+  margin-top: 150px;
   border: 2px solid white;
   border-radius: 20px;
   padding: 20px;
@@ -20,7 +20,7 @@
 .login {
   text-align: center;
   font-size: 80px;
-  color: #B4C027;
+  color: #b4c027;
   text-shadow: 3px 5px 2px #1b423a;
   margin: 0 0 0 0;
 }
@@ -38,24 +38,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .button {
   background-color: #7db094;
   text-decoration: none;
-  color: #F1F0eb;
+  color: #f1f0eb;
   font-size: 30px;
   padding: 7px 80px;
   border-radius: 20px;
   margin-top: 25px;
 }
 
-.button:hover{
+.button:hover {
   cursor: pointer;
 }
 
-.email, .password {
+.email,
+.password {
   margin: 20px 0;
 }
 
@@ -73,7 +74,8 @@
   text-align: center;
 }
 
-.fas, .fa-heart{
+.fas,
+.fa-heart {
   color: red;
 }
 
@@ -83,4 +85,11 @@
   color: #1b423a;
   margin: 0 0 0 0;
   text-shadow: none;
+}
+
+.errormessage {
+  width: 100%;
+  text-align: center;
+  color: #b44a22;
+  margin: 0;
 }
