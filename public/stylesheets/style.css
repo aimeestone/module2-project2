@@ -13,6 +13,10 @@
 @import url("/stylesheets/login_responsive.css");
 @import url("/stylesheets/signup_responsive.css");
 @import url("/stylesheets/plants-responsive.css");
+<<<<<<< HEAD
+@import url("/stylesheets/nav_responsive.css");
+=======
+>>>>>>> c719ebaa46a5a1060237fe0913a4439108423d61
 
 * {
   box-sizing: border-box;

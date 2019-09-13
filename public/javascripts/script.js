@@ -4,10 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
   heart();
 });
 
+const burger = document.querySelector("#mobile-icon");
+const navMobile = document.getElementById("nav_mobile");
+console.log(burger);
+
+function toggleMobileNav(evt) {
+  navMobile.classList.toggle("is-active");
+}
+burger.addEventListener("click", toggleMobileNav);
+
 // const allPlants = document.getElementById("allPlants");
 var grid = document.getElementById("grid");
 var container = document.getElementById("container");
 var user;
+
 /*user is loggedIn*/
 
 function userLoggedIn() {
