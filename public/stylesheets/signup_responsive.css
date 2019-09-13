@@ -46,10 +46,10 @@
 /* from 415px to 1023px */
 @media screen and (min-width: 414px) and (max-width: 1023px) {
   #signup {
-    height: 620px;
     width: 80%;
     margin-top: 90px;
     padding: 10px;
+    margin-bottom: 20px;
   }
 
   .title_signup {
@@ -58,6 +58,12 @@
 
   #form {
     font-size: 25px;
+    width: 100%;
+  }
+
+  .form {
+    font-size: 25px;
+    width: 100%;
   }
 
   .button_signup {
@@ -88,9 +94,10 @@
 /* from 1024ox to 1440px */
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   #signup {
-    /* height: 60vh; */
+    height: 80%;
     width: 50%;
     margin-top: 90px;
+    margin-bottom: 20px;
     padding: 10px;
   }
 
@@ -109,7 +116,7 @@
   }
 
   .label {
-    margin: 10px 0;
+    margin: 5px;
     font-size: 25px;
   }
 
@@ -130,10 +137,11 @@
 /* from 1440px */
 @media screen and (min-width: 1440px) {
   #signup {
-    height: 710px;
-    width:50%;
+    /* height: 710px; */
+    width: 50%;
     margin-top: 90px;
     padding: 10px;
+    margin-bottom: 50px;
   }
 
   .title_signup {
@@ -151,7 +159,7 @@
   }
 
   .label {
-    margin: 10px 0;
+    margin: 5px;
     font-size: 25px;
   }
 
