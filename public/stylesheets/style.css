@@ -10,6 +10,11 @@
 @import url("/stylesheets/responsive.css");
 @import url("/stylesheets/profile_responsive.css");
 @import url("/stylesheets/one_plant_responsive.css");
+@import url("/stylesheets/login_responsive.css");
+@import url("/stylesheets/signup_responsive.css");
+@import url("/stylesheets/profile-responsive.css");
+@import url("/stylesheets/plants-responsive.css");
+@import url("/stylesheets/nav_responsive.css");
 
 * {
   box-sizing: border-box;

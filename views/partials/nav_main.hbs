@@ -1,19 +1,45 @@
-<nav>
-  <a href="/">Home</a>
-  <ul id="main-nav">
-    <li><a href="/plants">Plants repertory</a></li>
-    {{#if isLoggedIn }}
-    <li><a href="/map">Garden Centers Map</a></li>
-    {{/if}}
-  </ul>
+<nav class="nav-container">
+  <div id="main-links">
+    <a href="/" class="home-link"><img class="nav-img" src="../../images/picto2.png"></a>
+    <div class="nav-ul-container">
+      <ul id="main-nav">
+        <li><a href="/plants">Find a plant</a></li>
+        {{#if isLoggedIn }}
 
-  <ul id="user-nav">
-    {{#if isLoggedIn }}
-    <li><a href="/profile">Profile</a></li>
-    <li><a href="/logout">Logout</a></li>
-    {{/if}}
-    {{#unless isLoggedIn}}
-    <li><a href="/login">Login</a></li>
-    {{/unless}}
-  </ul>
+        <li><a href="/map">Find a shop</a></li>
+        {{/if}}
+      </ul>
+      <ul id="user-nav">
+        {{#if isLoggedIn }}
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
+        {{/if}}
+        {{#unless isLoggedIn}}
+        <li><a href="/login">Login</a></li>
+        {{/unless}}
+      </ul>
+    </div>
+  </div>
+
+  <span id="mobile-icon">Menu
+    <div id="nav_mobile">
+      <ul id="plant-nav">
+        <li><a href="/plants">Find a plant</a></li>
+        {{#if isLoggedIn }}
+        <li><a href="/map">Find a shop</a></li>
+        {{/if}}
+      </ul>
+
+      <ul id="user-nav">
+        {{#if isLoggedIn }}
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/logout">Logout</a></li>
+        {{/if}}
+        {{#unless isLoggedIn}}
+        <li><a href="/login">Login</a></li>
+        {{/unless}}
+      </ul>
+    </div>
+  </span>
+
 </nav>

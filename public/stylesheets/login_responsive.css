@@ -1,0 +1,131 @@
+/*LOGIN*/
+
+/* phones */
+/* from 413px */ 
+@media screen and (max-width: 413px) {
+  #content_login {
+    height: 100vh;
+  }
+  
+  #login {
+    margin-top: 100px;
+    border-radius: 20px;
+    padding: 20px;
+    height: 450px;
+    width: 80vw;
+  }
+  
+  #form {
+    font-size: 15px;
+    width: 100%;
+  }
+  
+  .form {
+    margin: 0;
+    /* margin: 20px; */
+  }
+  
+  .button {
+    font-size: 15px;
+    padding: 7px 80px;
+    border-radius: 15px;
+    margin-top: 25px;
+  }
+  
+  .email,
+  .password {
+    margin: 10px 0;
+  }
+  
+  #form p {
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .input {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 13px;
+    width: 90%
+  }
+  
+  .welcome {
+    font-size: 17px;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .errormessage {
+    width: 100%;
+    margin: 0;
+    font-size: 15px;
+}
+}
+
+/* big phones / small tablet */
+/* from 415px to 767px */ 
+@media screen and (min-width: 414px) and (max-width: 767px) {
+  #content_login {
+    height: 100vh;
+  }
+  
+  #login {
+    margin-top: 100px;
+    border-radius: 20px;
+    padding: 20px;
+    height: 610px;
+    width: 80vw;
+  }
+  
+  #form {
+    font-size: 25px;
+    width: 100%;
+  }
+  
+  .form {
+    margin: 0;
+  }
+  
+  .button {
+    font-size: 25px;
+    padding: 7px 80px;
+    border-radius: 17px;
+    margin-top: 25px;
+  }
+  
+  .password {
+    margin: 20px 0;
+  }
+
+  .email{
+    margin: 15px 0;
+  }
+  
+  #form p {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .input {
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 17px;
+    width: 90%
+  }
+  
+  .welcome {
+    font-size: 25px;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .errormessage {
+    width: 100%;
+    text-align: center;
+    color: #b44a22;
+    margin: 0;
+    font-size: 20px;
+}
+}

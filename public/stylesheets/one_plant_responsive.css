@@ -1,7 +1,6 @@
 /*ONE PLANT*/
 
-/* phones */
-/* under 413px */
+/* phones, under 413px */
 @media screen and (max-width: 413px) {
   .content-one-plant {
     background-image: url("../images/one_plant.jpg");
@@ -198,10 +197,8 @@
 
 /* Medium to big desktop
 /* above 1440px */
-@media screen and (min-width: 1441px) {
+/* @media screen and (min-width: 1441px) {
   .content-one-plant {
-    margin-top: 70px;
-    display: flex;
     flex-direction: row;
     align-items: center;
     padding: 15px;
@@ -247,4 +244,4 @@
     width: 50%;
     justify-content: center;
   }
-}
+} */

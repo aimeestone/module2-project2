@@ -4,10 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
   heart();
 });
 
+const burger = document.querySelector("#mobile-icon");
+const navMobile = document.getElementById("nav_mobile");
+console.log(burger);
+
+function toggleMobileNav(evt) {
+  navMobile.classList.toggle("is-active");
+}
+burger.addEventListener("click", toggleMobileNav);
+
 // const allPlants = document.getElementById("allPlants");
 var grid = document.getElementById("grid");
 var container = document.getElementById("container");
 var user;
+
 /*user is loggedIn*/
 
 function userLoggedIn() {
@@ -30,7 +40,7 @@ function plantMini(plant, grid) {
     <div class="plant-mini grid-item">
   <i class="fav fas fa-heart white" data-id="${plant._id}"></i>
     <a class="plantsInfo" href="/plants/${plant._id}"> <div>
-      <h4>${plant.name}</h4>
+      <span>${plant.name}</span>
   </div></a>
   <div class="plant-mini-img">
    <img src="${plant.avatar}" alt="plant-img">
@@ -40,7 +50,7 @@ function plantMini(plant, grid) {
     grid.innerHTML += `
     <div class="plant-mini grid-item">
     <a class="plantsInfo" href="/plants/${plant._id}"> <div>
-      <h4>${plant.name}</h4>
+      <span>${plant.name}</span>
   </div></a>
   <div class="plant-mini-img">
    <img src="${plant.avatar}" alt="plant-img">
@@ -175,7 +185,6 @@ function favoritesPlant(target) {
     .catch(err => console.log(err));
 }
 
-
 function heart() {
   document.querySelectorAll(".fav").forEach(fav => {
     fav.onclick = function({ target }) {
@@ -183,7 +192,6 @@ function heart() {
     };
   });
 }
-
 
 /* Masonery Grid*/
 
