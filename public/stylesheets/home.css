@@ -23,7 +23,7 @@ header a {
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   text-align: right;
   font-size: 100px;
   color: #1b423a;
@@ -99,7 +99,7 @@ p {
 
 .advantage {
   box-shadow: 0px 0px 10px 2px rgba(58, 58, 58, 0.4);
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .advantage p {
@@ -109,7 +109,7 @@ p {
 .advantageImg {
   max-width: 100%;
   height: 265px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .advantageImg img {
@@ -172,10 +172,10 @@ section a {
   font-size: 20px;
 }
 
-h4{
+h4 {
   color: #1b423a;
 }
 
 #section2 {
-  background-color:#cdd9d7;
+  background-color: #cdd9d7;
 }
