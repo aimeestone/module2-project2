@@ -15,7 +15,7 @@ require("./config/cloudinary");
 // require("./bin/plants_seeds.js");
 
 mongoose
-  .connect(`${process.env.MONGODB_URI}`, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true
   })
   .then(x => {

@@ -10,7 +10,8 @@ var masonery = new Masonry(grid, {
   itemSelector: ".favgrid-item",
   columnWidth: ".favgrid-sizer",
   gutter: ".favgutter-sizer",
-  percentPosition: true
+  percentPosition: true,
+  originTop: true
 });
 
 imagesLoaded(grid).on("progress", function() {
