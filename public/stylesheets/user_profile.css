@@ -159,6 +159,10 @@
   width: 4px;
 }
 
+.favplant-mini {
+  position: relative;
+}
+
 .favplant-mini-img {
   height: 100%;
 }
@@ -187,6 +191,10 @@
   color: rgba(35, 48, 28, 1);
   background-color: rgba(255, 255, 255, 0.6);
   transition: background-color linear 0.5s;
+}
+
+.favplantsInfo span {
+  font-size: 30px;
 }
 
 .fav {
