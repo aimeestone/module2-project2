@@ -103,12 +103,12 @@ p {
 }
 
 .advantage p {
-  height: 100px;
+  height: 155px;
 }
 
 .advantageImg {
   max-width: 100%;
-  height: 430px;
+  height: 265px;
   overflow:hidden;
 }
 
