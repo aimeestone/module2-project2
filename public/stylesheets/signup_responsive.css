@@ -130,14 +130,14 @@
 /* from 1440px */ 
 @media screen and (min-width: 1440px) {
   #signup {
-    height: 760px;
+    height: 710px;
     width:50%;
     margin-top: 90px;
     padding: 10px;
   }
   
   .title_signup {
-    font-size: 70px;
+    font-size: 60px;
   }
   
   #form {
@@ -164,7 +164,7 @@
   
   .errormessage {
     width: 100%;
-    margin: 20px 0 10px 0;
+    margin: 10px 0 5px 0;
     font-size: 25px;
   }
 }
