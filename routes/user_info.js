@@ -99,7 +99,7 @@ router.post(
 router.post("/profile/:id/delete", (req, res) => {
   infoUser
     .findByIdAndDelete(req.params.id)
-    .then(dbRes => res.redirect("/"))
+    .then(dbRes => res.redirect("/logout"))
     .catch(err => console.log(err));
 });
 
