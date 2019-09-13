@@ -50,7 +50,7 @@ function placeGardenCenter(gardenCenter) {
 		};
 		var content = `<div id="content">
     <h3 class="title_marker">${center.name}</h3><br>
-    <p><b>Adresse: </b>${center.adresse}</p>
+    <p class="adresse"><b>Adresse: </b>${center.adresse}</p>
 		</div>`;
 
 		var infowindow = new google.maps.InfoWindow({
