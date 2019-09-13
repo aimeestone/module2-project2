@@ -1,9 +1,6 @@
 /* User's profile */
 
 .content-profile {
-  /* background-image: url("../images/profile.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; */
   height: 150vh;
   display: flex;
   justify-content: center;
@@ -13,21 +10,14 @@
   text-align: start;
   justify-content: flex-start;
   font-size: 40px;
-  color: #7db094;
-  /* text-shadow: 3px 5px 2px #1b423a; */
+  color: #1b423a;
   margin: 0 0 0 30px;
 }
-
-/* .subtitles {
-  width: 70%;
-  justify-content: center;
-  color: #f1f0eb;
-} */
 
 aside {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 25%;
   /* height: 100vh; */
   height: 100%;
   padding: 100px 0 100px 40px;
@@ -35,12 +25,6 @@ aside {
   color: white;
   box-shadow: 5px 0px 6px -4px rgba(125, 176, 164, 0.6);
 }
-
-/* #edit-profile {
-  justify-content: center;
-  text-align: start;
-  color: #f1f0eb;
-} */
 
 .input-name {
   font-size: 20px;
@@ -53,7 +37,6 @@ aside {
 }
 
 #header2 {
-  /* justify-content: center;*/
   text-align: start;
   color: #f1f0eb;
   padding-top: 20px;
@@ -65,15 +48,12 @@ aside {
 }
 
 .edit-btn {
-  /* height: 20px;
-  width: 50px; */
   background-color: #f1f0eb;
   color: #7db094;
   font-size: 15px;
   padding: 5px;
   border-radius: 10px;
   margin-left: 20px;
-  /* margin: 20px 0 40px 0; */
 }
 
 .edit-btn span {
@@ -83,18 +63,6 @@ aside {
 .edit-item {
   padding-bottom: 20px;
 }
-
-/* #profile-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  justify-content: flex-start;
-  /* margin: 70px 40px 0 40px; */
-/* margin: 0; */
-/* font-style: #acacac; */
-/* z-index: 11; */
-/* } */
 
 .user-likes {
   display: flex;
@@ -109,7 +77,6 @@ aside {
   justify-content: center;
   width: 150px;
   height: auto;
-  /* margin-left: 20px; */
 }
 
 .save-changes {
@@ -130,8 +97,13 @@ aside {
   margin: 20px 10px 10px 10px;
 }
 
+.subtitles {
+  font-size: 30px;
+  color: #7db094;
+}
+
 /* table to edit the user info */
-table.greenTable {
+/* table.greenTable {
   background-color: white;
   width: 30%;
   text-align: center;
@@ -162,10 +134,10 @@ table.greenTable thead th {
 }
 table.greenTable thead th:first-child {
   border-left: none;
-}
+} */
 
 /*favorites plants*/
-
+/* /* 
 .favplant {
   width: 30%;
 }
@@ -176,12 +148,12 @@ table.greenTable thead th:first-child {
 
 /* ALL PLANTS CLASSES & IDS */
 
-* {
+/* * {
   box-sizing: border-box;
 }
 
 /* All plants*/
-#plantsContainer {
+/* #plantsContainer {
   display: flex;
   flex-direction: row;
   margin-top: 70px;
@@ -189,11 +161,11 @@ table.greenTable thead th:first-child {
 
 #plantsContainer li {
   list-style-type: none;
-}
+} */
 
 /*plants catalog*/
 
-#plantFavorites {
+/* #plantFavorites {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -217,7 +189,8 @@ table.greenTable thead th:first-child {
   justify-content: center;
   align-items: center;
   margin-bottom: 2px;
-}
+}  */
+
 /*Masonery grid*/
 
 #gridProfile {
